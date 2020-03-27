@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Людмила Попова](https://up.htmlacademy.ru/adaptive/19/user/126417).
-*  Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
