@@ -35,7 +35,7 @@
 
   <main class="page-main">
     <section class="intro">
-      <h3 class="intro__title title">Конкурс на самое безбашенное путешествие с Пинк</h3>
+      <b class="intro__title title">Конкурс на самое безбашенное путешествие с Пинк</b>
     </section>
 
     <section class="form">
@@ -65,6 +65,7 @@
         </div>
         <div class="form__group form__group--two">
           <fieldset class="form__achievements achievement">
+            <legend class="achievement__legend">Ваши безбашенные достижения в путешествии</legend>
             <ul class="achievement__list">
               <li class="achievement__item">
                 <input class="achievement__checkbox" id="achieve-one" type="checkbox" checked>
@@ -124,10 +125,12 @@
             </ul>
           </fieldset>
         </div>
-        <div class="form__group textarea">
-          <p class="textarea__text"></p>
-          <textarea class="textarea__field" name="textarea" id="emotion" cols="30"
-            rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+        <div class="form__group form__group--five">
+          <fieldset class="form__comments textarea">
+            <legend class="textarea__legend">Опишите свои эмоции</legend>
+            <textarea class="textarea__field" name="textarea" id="emotion" cols="30"
+              rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </fieldset>
         </div>
         <button class="form__button button" type="submit">Отправить форму</button>
       </form>
