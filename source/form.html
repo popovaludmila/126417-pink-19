@@ -68,23 +68,23 @@
               <input class="checkbox__input visually-hidden" id="achieve-one" name="selfy" type="checkbox" checked>
               <label class="checkbox__label checkbox__label form__label" for="achieve-one">Сделал селфи с акулой</label>
             </li>
-            <li class="form__item">
+            <li class="form__item checkbox">
               <input class="checkbox__input visually-hidden" id="achieve-two" name="sunburn" type="checkbox" checked>
               <label class="checkbox__label form__label" for="achieve-two">Обгорел на пляже</label>
             </li>
-            <li class="form__item">
+            <li class="form__item checkbox">
               <input class="checkbox__input visually-hidden" id="achieve-three" name="celebrity" type="checkbox">
               <label class="checkbox__label form__label" for="achieve-three">Видел Чака Норриса</label>
             </li>
-            <li class="form__item">
+            <li class="form__item checkbox">
               <input class="checkbox__input visually-hidden" id="achieve-four" name="souvenir" type="checkbox">
               <label class="checkbox__label form__label" for="achieve-four">Накупил сувениров</label>
             </li>
-            <li class="form__item">
+            <li class="form__item checkbox">
               <input class="checkbox__input visually-hidden" id="achieve-five" name="tower" type="checkbox" checked>
               <label class="checkbox__label form__label" for="achieve-five">Удержал башню</label>
             </li>
-            <li class="form__item">
+            <li class="form__item checkbox">
               <input class="checkbox__input visually-hidden" id="achieve-six" name="hotel" type="checkbox">
               <label class="checkbox__label form__label" for="achieve-six">Разгромил отель</label>
             </li>
@@ -99,7 +99,8 @@
           </div>
           <div class="form__field-wrapper">
             <label class="form__label form__label--red" for="email">Адрес почты</label>
-            <input class="form__input" id="email" name="mail" type="text" placeholder="Введите почту" required="required">
+            <input class="form__input" id="email" name="mail" type="text" placeholder="Введите почту"
+              required="required">
           </div>
         </fieldset>
       </div>
@@ -111,11 +112,11 @@
               <input class="radio__input visually-hidden" id="radio-one" type="radio" name="app" value="iOS" checked>
               <label class="radio__ label form__label" for="radio-one">Pink для iOS</label>
             </li>
-            <li class="form__item">
-              <input class="fradio__input visually-hidden" id="radio-two" type="radio" name="app" value="android">
+            <li class="form__item radio">
+              <input class="radio__input visually-hidden" id="radio-two" type="radio" name="app" value="android">
               <label class="radio__ label form__label" for="radio-two">Pink на Android</label>
             </li>
-            <li class="form__item">
+            <li class="form__item radio">
               <input class="radio__input visually-hidden" id="radio-three" type="radio" name="app" value="windows">
               <label class="radio__ label form__label" for="radio-three">Windows Phone</label>
             </li>
@@ -159,18 +160,18 @@
     </div>
   </footer>
 
-  <section class="modal modal--error">
-    <h2 class="modal__title">Что-то пошло не так!</h2>
+  <div class="modal modal--error">
+    <b class="modal__title">Что-то пошло не так!</b>
     <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="modal__button button">Ок</button>
-  </section>
+  </div>
 
-  <section class="modal modal--success">
-    <h2 class="modal__title">Ваша заявка отправлена</h2>
+  <div class="modal modal--success">
+    <b class="modal__title">Ваша заявка отправлена</b>
     <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы
       рассмотрим ее и оповестим вас.</p>
     <button class="modal__button button">Закрыть окно</button>
-  </section>
+  </div>
 </body>
 
 </html>
