@@ -1,0 +1,35 @@
+.download__content {
+  background-color: @base-color;
+}
+
+.download__link {
+  .button();
+  .subtitle();
+  color: @base-light-color;
+
+  border: 3px solid @base-light-color;
+  border-radius: 30px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: @add-color;
+
+    background-color: @base-light-color;
+  }
+
+  &:active {
+    color: @add-color;
+
+    background-color: @base-light-color;
+    opacity: 0.3;
+    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.35);
+  }
+
+}
+
+.download__list {
+  display: flex;
+
+  .list();
+}

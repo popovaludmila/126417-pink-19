@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,16 +20,16 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a>Главная</a>
+            <a class="site-list__link--current">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </div>
@@ -44,21 +45,26 @@
         <b class="intro__title">Взгляните на жизнь иначе!</b>
       </div>
       <div class="download__content">
-        <a class="download__link button" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
+        <a class="download__link" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
         <div class="download__wrapper">
-          <ul class="download__compatible compatible">
+          <ul class="download__list compatible">
             <li class="compatible__item">
               <a class="compatible__link compatible__link--ios" href="https://www.apple.com/ru/ios/app-store"
-                aria-label="Скачать для iOS">Скачать для iOS</a>
+                aria-label="Скачать для iOS">
+                <img class="compatible__icon" src="img/logo-android.svg">
+              </a>
             </li>
             <li class="compatible__item">
               <a class="compatible__link compatible__link--android" href="https://play.google.com/store"
-                aria-label="Скачать для Android">Скачать для Android</a>
+                aria-label="Скачать для Android">
+                <img class="compatible__icon" src="img/logo-apple.svg">
+              </a>
             </li>
             <li class="compatible__item">
               <a class="compatible__link compatible__link--windows"
-                href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">Скачать
-                для Windows</a>
+                href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">
+                <img class="compatible__icon" src="img/logo-microsoft.svg">
+              </a>
             </li>
           </ul>
         </div>
