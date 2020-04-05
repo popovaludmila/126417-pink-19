@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Пинк</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic"
     rel="stylesheet">
@@ -15,8 +17,8 @@
       <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
         alt="Логотип Пинк">
     </a>
+    <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -45,73 +47,77 @@
         <p class="intro__title">Взгляните на жизнь иначе!</p>
       </div>
       <div class="intro__download download">
-        <a class="download__link" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
         <div class="download__wrapper">
-          <ul class="download__list compatible">
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--ios" href="https://www.apple.com/ru/ios/app-store"
+          <a class="download__button" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a class="download__link download__link--ios" href="https://www.apple.com/ru/ios/app-store"
                 aria-label="Скачать для iOS">
-                <img class="compatible__icon" src="img/logo-android.svg">
+                <img class="download__icon" src="img/logo-android.svg">
               </a>
             </li>
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--android" href="https://play.google.com/store"
+            <li class="download__item">
+              <a class="download__link download__link--android" href="https://play.google.com/store"
                 aria-label="Скачать для Android">
-                <img class="compatible__icon" src="img/logo-apple.svg">
+                <img class="download__icon" src="img/logo-apple.svg">
               </a>
             </li>
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--windows"
+            <li class="download__item">
+              <a class="download__link download__link--windows"
                 href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">
-                <img class="compatible__icon" src="img/logo-microsoft.svg">
+                <img class="download__icon" src="img/logo-microsoft.svg">
               </a>
             </li>
           </ul>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </section>
 
     <section class="information">
-      <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
-      <p class="information__slogan">Устали от серости мегаполиса?</p>
-      <p class="information__slogan"> Нам есть, что вам предложить!</p>
-      <div class="information__wrapper">
-        <ul class="information__list advantages">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-              несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг </h3>
-            <p class="advantages__text">Сделайте снимок и украстьте его смайликом или текстовым подписью,
-              чтобы усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями
-              с друзьями и заводите новых</p>
-          </li>
-        </ul>
+      <div class="information__container">
+        <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
+        <p class="information__slogan">Устали от серости мегаполиса?</p>
+        <p class="information__slogan"> Нам есть, что вам предложить!</p>
+        <div class="information__wrapper">
+          <ul class="information__list advantages">
+            <li class="advantages__item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+                несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Меняет мир вокруг </h3>
+              <p class="advantages__text">Сделайте снимок и украстьте его смайликом или текстовым подписью,
+                чтобы усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями
+                с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="reviews">
-      <h2 class="visually-hidden">Отзывы о приложении</h2>
-      <div class="reviews__wrapper slider">
-        <div class="reviews__list slider-list">
-          <blockquote class="reviews__item  slider__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
-              серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
+      <div class="reviews__container">
+        <h2 class="visually-hidden">Отзывы о приложении</h2>
+        <div class="reviews__wrapper slider">
+          <div class="reviews__list slider-list">
+            <blockquote class="reviews__item  slider__item">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </div>
+          <p class="reviews__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
       </div>
     </section>
 
