@@ -155,9 +155,9 @@
           </tr>
         </table>
         <p class="price__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle slider__toggle--current" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
         </p>
       </div>
     </section>
@@ -165,24 +165,23 @@
 
   <footer class="main-footer">
     <div class="main-footer__map">
-      <img class="main-footer__map-image" src="https://via.placeholder.com/320x645" width="320" height="645"
-        alt="Офис на карте">
+      <img class="main-footer__map-image" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Офис на карте">
     </div>
     <div class="main-footer__contacts contacts">
-      <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
       <div class="contacts__wrapper">
+        <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
         <ul class="contacts__list">
           <li class="contacts__item contacts__item--phone">
             <p class="contacts__text">Звоните:</p>
-            <a class="contacts-phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <a class="contacts__info" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
           <li class="contacts__item contacts__item--email">
             <p class="contacts__text">Пишите:</p>
-            <a class="contacts-email" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__info" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts__item contacts__item--adress">
             <p class="contacts__text">Приезжайте в гости:</p>
-            <p class="contacts-adress">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
       </div>
