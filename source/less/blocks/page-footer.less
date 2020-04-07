@@ -7,6 +7,18 @@
   padding-right: 20px;
   padding-bottom: 40px;
 
+  &:hover .page-footer__logo-icon path {
+    fill: @add-color;
+  }
+
+  &:active .page-footer__logo {
+    opacity: 0.3;
+
+    &-icon path {
+      fill: @base-color;
+    }
+  }
+
   &__social {
     padding-top: 35px;
   }
