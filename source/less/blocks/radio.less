@@ -17,20 +17,20 @@
     border: 2px solid #e5e5e5;
     border-radius: 50%;
     text-align: center;
-
-    &:hover,
-    &:focus {
-      border: 2px solid @base-color;
-    }
-
-    &:active {
-      border: 2px solid @add-color;
-    }
   }
 
   &__input:checked + &__label::before {
     content: url("../../img/icon-radio.svg");
 
     padding-top: 6px;
+  }
+
+  &__input:hover + .radio__label::before,
+  &__input:focus + .radio__label::before {
+    border: 2px solid @base-color;
+  }
+
+  &__input:active + .radio__label::before {
+    border: 2px solid @add-color;
   }
 }

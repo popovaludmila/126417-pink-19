@@ -2,15 +2,6 @@
   &__label {
     .subtitle();
     font-weight: 400;
-
-    &:hover .checkbox__label::before,
-    &:focus .checkbox__label::before {
-      border: 2px solid @base-color;
-    }
-
-    &:active .checkbox__label::before {
-      border: 2px solid @add-color;
-    }
   }
 
   &__label::before {
@@ -30,5 +21,14 @@
   &__input:checked + &__label::before {
     content: url("../../img/icon-yes.svg");
     padding-top: 4px;
+  }
+
+  &__input:hover + .checkbox__label::before,
+  &__input:focus + .checkbox__label::before {
+    border: 2px solid @base-color;
+  }
+
+  &__input:active + .checkbox__label::before {
+    border: 2px solid @add-color;
   }
 }
