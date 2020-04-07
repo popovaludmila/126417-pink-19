@@ -1,4 +1,4 @@
-.checkbox {
+.radio {
   &__label {
     .subtitle();
     font-weight: 400;
@@ -15,11 +15,13 @@
 
     background-color: @base-light-color;
     border: 2px solid #e5e5e5;
+    border-radius: 50%;
     text-align: center;
   }
 
   &__input:checked + &__label::before {
-    content: url("../../img/icon-yes.svg");
-    padding-top: 4px;
+    content: url("../../img/icon-radio.svg");
+
+    padding-top: 6px;
   }
 }
