@@ -61,6 +61,16 @@
   line-height: 30px;
   font-weight: 400;
   border: 2px solid #e5e5e5;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @base-color;
+  }
+
+  &:active {
+    border: 2px solid @add-color;
+  }
 }
 
 .form__group--two {
@@ -96,6 +106,16 @@
   border: 2px solid #e5e5e5;
 
   resize: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @base-color;
+  }
+
+  &:active {
+    border: 2px solid @add-color;
+  }
 }
 
 .form__button {

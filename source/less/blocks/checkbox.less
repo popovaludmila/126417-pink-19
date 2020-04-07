@@ -2,6 +2,15 @@
   &__label {
     .subtitle();
     font-weight: 400;
+
+    &:hover .checkbox__label::before,
+    &:focus .checkbox__label::before {
+      border: 2px solid @base-color;
+    }
+
+    &:active .checkbox__label::before {
+      border: 2px solid @add-color;
+    }
   }
 
   &__label::before {

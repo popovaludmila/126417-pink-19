@@ -9,5 +9,14 @@
   &__link {
     width: 27px;
     height: 35px;
+
+    &:hover path,
+    &:focus path {
+      fill: @base-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
