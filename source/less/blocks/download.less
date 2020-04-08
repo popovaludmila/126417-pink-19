@@ -1,64 +1,66 @@
 .download {
   background-color: #1d2631;
-}
 
-.download__button {
-  width: 288px;
-  .button();
-  .subtitle();
-  color: @base-light-color;
+  &__button {
+    width: 288px;
+    .button();
+    .subtitle();
+    color: @base-light-color;
 
-  border: 3px solid @base-light-color;
-  border-radius: 30px;
-  background-color: transparent;
+    border: 3px solid @base-light-color;
+    border-radius: 30px;
+    background-color: transparent;
 
-  &:hover,
-  &:focus {
-    color: @add-color;
+    &:hover,
+    &:focus {
+      color: @add-color;
 
-    background-color: @base-light-color;
+      background-color: @base-light-color;
+    }
+
+    &:active {
+      color: @add-color;
+
+      background-color: @base-light-color;
+      opacity: 0.3;
+      box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.35);
+    }
   }
 
-  &:active {
-    color: @add-color;
+  &__wrapper {
+    width: 288px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    margin: 0 auto;
 
-    background-color: @base-light-color;
-    opacity: 0.3;
-    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.35);
+    text-align: center;
   }
-}
 
-.download__wrapper {
-  width: 288px;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  margin: 0 auto;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-  text-align: center;
-}
+    .list();
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
 
-.download__list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  &__item {
+    &:first-child {
+      padding-left: 15px;
+    }
 
-  .list();
-  padding-top: 30px;
-  padding-bottom: 15px;
-}
+    &:nth-child(3) {
+      padding-right: 15px;
+    }
+  }
 
-.download__item:first-child {
-  padding-left: 15px;
-}
+  &__text {
+    margin: 0;
+    padding-bottom: 30px;
 
-.download__item:nth-child(3) {
-  padding-right: 15px;
-}
-
-.download__text {
-  margin: 0;
-  padding-bottom: 30px;
-
-  color: @base-light-color;
-  font-weight: 300;
+    color: @base-light-color;
+    font-weight: 300;
+  }
 }
