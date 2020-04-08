@@ -1,0 +1,61 @@
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: @grey-bg-color;
+
+  &__photo {
+    text-align: center;
+
+    &--panorama {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__img {
+    border: 0;
+  }
+
+  &__text {
+    padding: 20px;
+
+    .text();
+  }
+
+  &__name {
+    margin: 0;
+
+    font-weight: 700;
+  }
+
+  &__time {
+    .add-text();
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__comment {
+    margin: 0;
+  }
+
+  &__rate {
+    display: flex;
+
+    padding-top: 10px;
+  }
+
+  &__likes-count {
+    margin: 0;
+    padding-left: 10px;
+
+    .add-text();
+    color: @add-color;
+    text-transform: uppercase;
+  }
+}
