@@ -1,9 +1,10 @@
 .content {
-  margin-left: 20px;
-  margin-right: 20px;
   margin-bottom: 20px;
 
-  background-color: @grey-bg-color;
+  &--panorama {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &__photo {
     text-align: center;
@@ -14,11 +15,15 @@
   }
 
   &__link {
-    margin: 0;
+    display: block;
+
     cursor: pointer;
   }
 
   &__img {
+    display: block;
+
+    width: 100%;
     border: 0;
   }
 
@@ -26,6 +31,12 @@
     padding: 20px;
 
     .text();
+    background-color: @grey-bg-color;
+
+    &--panorama {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
   }
 
   &__name {
@@ -48,6 +59,11 @@
     display: flex;
 
     padding-top: 10px;
+  }
+
+  &__likes-button {
+    border: 0;
+    background-color: transparent;
   }
 
   &__likes-count {
