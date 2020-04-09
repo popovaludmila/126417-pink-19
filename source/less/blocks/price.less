@@ -1,0 +1,61 @@
+.price {
+  background-color: @grey-bg-color;
+
+  &__list {
+    margin: 0 auto;
+    background-color: @base-light-color;
+
+    text-align: center;
+    border-collapse: collapse;
+    vertical-align: middle;
+
+    & td {
+      width: 280px;
+    }
+
+    & th {
+      width: 280px;
+      border: 1px solid @grey-bg-color;
+    }
+  }
+
+  &__tariff {
+    padding-top: 15px;
+    border: 1px solid @grey-bg-color;
+    border-bottom: 0;
+    border-top: 0;
+
+    .subtitle();
+    color: @base-light-color;
+
+    background-color: @base-color;
+  }
+
+  &__value {
+    padding-bottom: 15px;
+    border: 1px solid @grey-bg-color;
+    border-bottom: 0;
+    border-top: 0;
+
+    .title();
+    color: @base-light-color;
+
+    text-transform: uppercase;
+    background-color: @base-color;
+  }
+
+  &__option {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid @grey-bg-color;
+
+    .text();
+    text-transform: uppercase;
+  }
+
+  &__toggles {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
