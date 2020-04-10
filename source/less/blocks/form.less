@@ -4,161 +4,161 @@
   align-items: center;
 
   padding-top: 50px;
+}
 
-  &__group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    padding: 40px 20px;
+  padding: 40px 20px;
 
-    &--one {
-      padding-top: 20px;
-    }
-
-    &--two {
-      background-color: @grey-bg-color;
-    }
-
-    &--three {
-      padding-top: 20px;
-    }
-
-    &--four {
-      background-color: @grey-bg-color;
-    }
-  }
-
-  &__text {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0;
-
-    text-align: center;
-  }
-
-  &__fieldset {
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  &__field-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__label {
+  &--one {
     padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-
-    .text();
-    color: @base-color;
-
-    &--red {
-      color: @add-color;
-      text-transform: uppercase;
-    }
   }
 
-  &__legend {
-    padding-bottom: 15px;
+  &--two {
+    background-color: @grey-bg-color;
+  }
 
-    .text();
+  &--three {
+    padding-top: 20px;
+  }
+
+  &--four {
+    background-color: @grey-bg-color;
+  }
+}
+
+.form__text {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+
+  text-align: center;
+}
+
+.form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.form__field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+
+  .text();
+  color: @base-color;
+
+  &--red {
     color: @add-color;
-    text-align: center;
     text-transform: uppercase;
   }
+}
 
-  &__input {
-    width: 280px;
-    height: 60px;
-    padding: 20px;
+.form__legend {
+  padding-bottom: 15px;
 
-    .subtitle();
-    line-height: 30px;
-    font-weight: 400;
-    border: 2px solid #e5e5e5;
-    outline: none;
+  .text();
+  color: @add-color;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-    &:hover,
-    &:focus {
-      border: 2px solid @base-color;
-    }
+.form__input {
+  width: 280px;
+  height: 60px;
+  padding: 20px;
 
-    &:active {
-      border: 2px solid @add-color;
-    }
+  .subtitle();
+  line-height: 30px;
+  font-weight: 400;
+  border: 2px solid #e5e5e5;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @base-color;
   }
 
-  &__list {
-    .list();
+  &:active {
+    border: 2px solid @add-color;
+  }
+}
+
+.form__list {
+  .list();
+}
+
+.form__item {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 25px;
+  }
+}
+
+.form__textarea {
+  padding: 20px;
+
+  .subtitle();
+  line-height: 30px;
+  font-weight: 400;
+  border: 2px solid #e5e5e5;
+
+  resize: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @base-color;
   }
 
-  &__item {
-    margin-top: 40px;
+  &:active {
+    border: 2px solid @add-color;
+  }
+}
 
-    &:first-child {
-      margin-top: 25px;
-    }
+.form__button {
+  .button();
+  width: 284px;
+  .subtitle();
+  color: @base-light-color;
+  text-transform: uppercase;
+
+  background-color: #2aab6d;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
   }
 
-  &__textarea {
-    padding: 20px;
-
-    .subtitle();
-    line-height: 30px;
-    font-weight: 400;
-    border: 2px solid #e5e5e5;
-
-    resize: none;
-    outline: none;
-
-    &:hover,
-    &:focus {
-      border: 2px solid @base-color;
-    }
-
-    &:active {
-      border: 2px solid @add-color;
-    }
+  &:active {
+    color: #7abc98;
   }
 
-  &__button {
-    .button();
-    width: 284px;
-    .subtitle();
-    color: @base-light-color;
-    text-transform: uppercase;
-
-    background-color: #2aab6d;
-
-    &:hover,
-    &:focus {
-      background-color: #1c9b5e;
-    }
-
-    &:active {
-      color: #7abc98;
-    }
-
-    &:disabled {
-      background-color: #e5e5e5;
-    }
+  &:disabled {
+    background-color: #e5e5e5;
   }
+}
 
-  &__notification {
-    padding-top: 40px;
-    padding-bottom: 40px;
+.form__notification {
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-    .text();
-    text-transform: uppercase;
-    text-align: center;
+  .text();
+  text-transform: uppercase;
+  text-align: center;
 
-    & sup {
-      color: @add-color;
-    }
+  & sup {
+    color: @add-color;
   }
 }

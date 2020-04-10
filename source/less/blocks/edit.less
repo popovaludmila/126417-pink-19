@@ -1,91 +1,91 @@
 .edit {
   padding-bottom: 20px;
+}
 
-  &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.edit__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .list();
-    margin-top: 35px;
+  .list();
+  margin-top: 35px;
+}
+
+.edit__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
   }
 
-  &__item {
-    margin-right: 30px;
+  & path,
+  & rect {
+    opacity: 0.3;
+  }
 
-    &:last-child {
-      margin-right: 0;
+  &:hover .fill,
+  &:focus .fill,
+  &:hover rect,
+  &:focus rect {
+    opacity: 1;
+  }
+
+  &:active .fill,
+  &:active rect {
+    opacity: 1;
+    fill: @add-color;
+  }
+
+  &--current .fill {
+    opacity: 1;
+    fill: @add-color;
+  }
+}
+
+.edit__button {
+  width: 280px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  .button();
+  .subtitle();
+  color: @add-color;
+
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  background-color: transparent;
+
+  &--red {
+    color: @add-color;
+    border-color: @add-color;
+
+    &:hover,
+    &:focus {
+      color: @base-light-color;
+      background-color: @add-color;
     }
 
-    & path,
-    & rect {
+    &:active {
+      color: #e07e94;
+    }
+  }
+
+  &--grey {
+    color: @base-color;
+    border-color: @base-color;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
       opacity: 0.3;
     }
 
-    &:hover .fill,
-    &:focus .fill,
-    &:hover rect,
-    &:focus rect {
-      opacity: 1;
-    }
-
-    &:active .fill,
-    &:active rect {
-      opacity: 1;
-      fill: @add-color;
-    }
-
-    &--current .fill {
-      opacity: 1;
-      fill: @add-color;
-    }
-  }
-
-  &__button {
-    width: 280px;
-    margin-top: 10px;
-    margin-right: 10px;
-
-    .button();
-    .subtitle();
-    color: @add-color;
-
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 30px;
-    background-color: transparent;
-
-    &--red {
-      color: @add-color;
-      border-color: @add-color;
-
-      &:hover,
-      &:focus {
-        color: @base-light-color;
-        background-color: @add-color;
-      }
-
-      &:active {
-        color: #e07e94;
-      }
-    }
-
-    &--grey {
-      color: @base-color;
+    &:active {
+      color: @base-light-color;
       border-color: @base-color;
-      opacity: 0.1;
-
-      &:hover,
-      &:focus {
-        opacity: 0.3;
-      }
-
-      &:active {
-        color: @base-light-color;
-        border-color: @base-color;
-        background-color: @base-color;
-        opacity: 0.3;
-      }
+      background-color: @base-color;
+      opacity: 0.3;
     }
   }
 }

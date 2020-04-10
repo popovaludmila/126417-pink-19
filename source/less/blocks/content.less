@@ -5,73 +5,73 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
 
-  &__photo {
-    text-align: center;
+.content__photo {
+  text-align: center;
 
-    &--panorama {
-      padding: 0;
-    }
+  &--panorama {
+    padding: 0;
   }
+}
 
-  &__link {
-    display: block;
+.content__link {
+  display: block;
 
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.content__img {
+  display: block;
+
+  width: 100%;
+  border: 0;
+}
+
+.content__text {
+  padding: 20px;
+
+  .text();
+  background-color: @grey-bg-color;
+
+  &--panorama {
+    margin-right: 20px;
+    margin-left: 20px;
   }
+}
 
-  &__img {
-    display: block;
+.content__name {
+  margin: 0;
 
-    width: 100%;
-    border: 0;
-  }
+  font-weight: 700;
+}
 
-  &__text {
-    padding: 20px;
+.content__time {
+  .add-text();
+  font-weight: 300;
+  text-transform: uppercase;
+}
 
-    .text();
-    background-color: @grey-bg-color;
+.content__comment {
+  margin: 0;
+}
 
-    &--panorama {
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-  }
+.content__rate {
+  display: flex;
 
-  &__name {
-    margin: 0;
+  padding-top: 10px;
+}
 
-    font-weight: 700;
-  }
+.content__likes-button {
+  border: 0;
+  background-color: transparent;
+}
 
-  &__time {
-    .add-text();
-    font-weight: 300;
-    text-transform: uppercase;
-  }
+.content__likes-count {
+  margin: 0;
+  padding-left: 10px;
 
-  &__comment {
-    margin: 0;
-  }
-
-  &__rate {
-    display: flex;
-
-    padding-top: 10px;
-  }
-
-  &__likes-button {
-    border: 0;
-    background-color: transparent;
-  }
-
-  &__likes-count {
-    margin: 0;
-    padding-left: 10px;
-
-    .add-text();
-    color: @add-color;
-    text-transform: uppercase;
-  }
+  .add-text();
+  color: @add-color;
+  text-transform: uppercase;
 }

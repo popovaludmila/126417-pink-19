@@ -1,22 +1,20 @@
-.copyright {
-  &__text {
-    margin: 0;
-    padding-right: 15px;
+.copyright__text {
+  margin: 0;
+  padding-right: 15px;
 
-    .text();
+  .text();
+}
+
+.copyright__link {
+  width: 27px;
+  height: 35px;
+
+  &:hover path,
+  &:focus path {
+    fill: @base-color;
   }
 
-  &__link {
-    width: 27px;
-    height: 35px;
-
-    &:hover path,
-    &:focus path {
-      fill: @base-color;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
