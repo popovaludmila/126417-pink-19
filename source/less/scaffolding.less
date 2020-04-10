@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   font-size: 14px;
@@ -22,10 +22,13 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
