@@ -47,4 +47,17 @@
 
   .title();
   color: @add-color;
+
+  &--email {
+    &:hover,
+    &:focus {
+      color: @base-color;
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+      opacity: 0.3;
+    }
+  }
 }
