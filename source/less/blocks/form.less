@@ -1,0 +1,163 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 50px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  &--one {
+    padding-top: 20px;
+  }
+
+  &--two {
+    background-color: @grey-bg-color;
+  }
+
+  &--three {
+    padding-top: 20px;
+  }
+
+  &--four {
+    background-color: @grey-bg-color;
+  }
+}
+
+.form__text {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+
+  text-align: center;
+}
+
+.form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.form__field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+
+  .text();
+  color: @base-color;
+
+  &--red {
+    color: @add-color;
+    text-transform: uppercase;
+  }
+}
+
+.form__legend {
+  padding-bottom: 15px;
+
+  .text();
+  color: @add-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__input {
+  width: 280px;
+  height: 60px;
+  padding: 20px;
+
+  .subtitle();
+  line-height: 30px;
+  font-weight: 400;
+  border: 2px solid #e5e5e5;
+  outline: none;
+
+  &:hover {
+    border: 2px solid @base-color;
+  }
+
+  &:focus {
+    border: 2px solid @add-color;
+  }
+}
+
+.form__list {
+  .list();
+}
+
+.form__item {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 25px;
+  }
+}
+
+.form__textarea {
+  padding: 20px;
+
+  .subtitle();
+  line-height: 30px;
+  font-weight: 400;
+  border: 2px solid #e5e5e5;
+
+  resize: none;
+  outline: none;
+
+  &:hover {
+    border: 2px solid @base-color;
+  }
+
+  &:focus {
+    border: 2px solid @add-color;
+  }
+}
+
+.form__button {
+  .button();
+  width: 284px;
+  .subtitle();
+  color: @base-light-color;
+  text-transform: uppercase;
+
+  background-color: #2aab6d;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: #7abc98;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.form__notification {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .text();
+  text-transform: uppercase;
+  text-align: center;
+
+  & sup {
+    color: @add-color;
+  }
+}

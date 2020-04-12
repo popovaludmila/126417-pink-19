@@ -1,0 +1,60 @@
+.modal {
+  width: 320px;
+
+  text-align: center;
+
+  &--error {
+    padding-top: 40px;
+    background-color: @base-light-color;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .subtitle();
+  color: #000000;
+}
+
+.modal__text {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .text();
+}
+
+.modal__button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .button();
+  width: 280px;
+  .subtitle();
+  color: @base-light-color;
+  text-transform: uppercase;
+
+  background-color: #2aab6d;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: #7abc98;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.modal__content {
+  padding-top: 40px;
+  background-color: @grey-bg-color;
+}

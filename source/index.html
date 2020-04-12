@@ -3,30 +3,36 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/75x22" width="75" height="22"
+      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
         alt="Логотип Пинк">
     </a>
+    <button class="main-nav__toggle visually-hidden" type="button">
+      <span class="main-nav__toggle-item">Открыть меню</span>
+    </button>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a>Главная</a>
+            <a class="site-list__link--current">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </div>
@@ -36,53 +42,60 @@
   <main class="page-main">
     <h1 class="visually-hidden">Приложение для редактирования фото "Пинк"</h1>
 
-    <section class="intro download">
+    <section class="intro">
       <div class="intro__content">
         <h2 class="visually-hidden">Скачать приложение на своё устройство</h2>
-        <b class="intro__title title">Взгляните на жизнь иначе!</b>
+        <p class="intro__title">Взгляните на жизнь иначе!</p>
       </div>
-      <div class="download__content">
-        <a class="download__link button" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
+      <div class="intro__download download">
         <div class="download__wrapper">
-          <ul class="download__compatible compatible">
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--ios" href="https://www.apple.com/ru/ios/app-store"
-                aria-label="Скачать для iOS">Скачать для iOS</a>
+          <a class="download__button" href="https://www.apple.com/ru/ios/app-store">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a class="download__link download__link--ios" href="https://www.apple.com/ru/ios/app-store"
+                aria-label="Скачать для iOS">
+                <img class="download__icon" src="img/logo-android.svg">
+              </a>
             </li>
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--android" href="https://play.google.com/store"
-                aria-label="Скачать для Android">Скачать для Android</a>
+            <li class="download__item">
+              <a class="download__link download__link--android" href="https://play.google.com/store"
+                aria-label="Скачать для Android">
+                <img class="download__icon" src="img/logo-apple.svg">
+              </a>
             </li>
-            <li class="compatible__item">
-              <a class="compatible__link compatible__link--windows"
-                href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">Скачать
-                для Windows</a>
+            <li class="download__item">
+              <a class="download__link download__link--windows"
+                href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">
+                <img class="download__icon" src="img/logo-microsoft.svg">
+              </a>
             </li>
           </ul>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <p class="download__text text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </section>
 
     <section class="information">
-      <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
-      <p class="information__slogan title">Устали от серости мегаполиса?</p>
-      <p class="information__slogan title"> Нам есть, что вам предложить!</p>
       <div class="information__wrapper">
+        <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
+        <p class="information__slogan">Устали от серости мегаполиса?</p>
+        <p class="information__text"> Нам есть, что вам предложить!</p>
+      </div>
+      <div class="information__content">
         <ul class="information__list advantages">
           <li class="advantages__item">
             <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__text text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
               несколько кликов!</p>
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Меняет мир вокруг </h3>
-            <p class="advantages__text text">Сделайте снимок и украстьте его смайликом или текстовым подписью,
+            <p class="advantages__text">Сделайте снимок и украстьте его смайликом или текстовым подписью,
               чтобы усилить эффект</p>
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__text text">Ставьте лайки, комментируйте, делитесь фотографиями
+            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями
               с друзьями и заводите новых</p>
           </li>
         </ul>
@@ -100,9 +113,9 @@
           </blockquote>
         </div>
         <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle slider__toggle--current" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
         </p>
       </div>
     </section>
@@ -114,7 +127,7 @@
           <tr>
             <th class="visually-hidden">Тариф</th>
             <td class="price__tariff">База</td>
-            <td class="price__tariff">Стандарт</td>
+            <td class="price__tariff price__tariff--hit">Стандарт</td>
             <td class="price__tariff"> Анлим</td>
           </tr>
           <tr>
@@ -143,9 +156,9 @@
           </tr>
         </table>
         <p class="price__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle slider__toggle--current" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
         </p>
       </div>
     </section>
@@ -153,24 +166,23 @@
 
   <footer class="main-footer">
     <div class="main-footer__map">
-      <img class="main-footer__map-image" src="https://via.placeholder.com/320x645" width="320" height="645"
-        alt="Офис на карте">
+      <img class="main-footer__map-image" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Офис на карте">
     </div>
     <div class="main-footer__contacts contacts">
-      <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
       <div class="contacts__wrapper">
+        <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
         <ul class="contacts__list">
           <li class="contacts__item contacts__item--phone">
             <p class="contacts__text">Звоните:</p>
-            <a class="contacts-phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <a class="contacts__info" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
           <li class="contacts__item contacts__item--email">
             <p class="contacts__text">Пишите:</p>
-            <a class="contacts-email" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__info contacts__info--email" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts__item contacts__item--adress">
             <p class="contacts__text">Приезжайте в гости:</p>
-            <p class="contacts-adress">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
       </div>

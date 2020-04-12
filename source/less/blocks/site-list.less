@@ -1,0 +1,37 @@
+.site-list {
+  .list();
+  text-align: center;
+
+  &__link {
+    color: @base-light-color;
+
+    &--current {
+      color: @base-light-color;
+
+      border-bottom: 2px solid @base-light-color;
+    }
+  }
+}
+
+.site-list__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid @base-dark-color;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.15);
+
+  &:hover .site-list__link,
+  &:focus .site-list__link {
+    color: @add-color;
+  }
+
+  &:active .site-list__link {
+    color: @base-light-color;
+
+    opacity: 0.3;
+  }
+
+  &:last-child {
+    box-shadow: none;
+  }
+}
