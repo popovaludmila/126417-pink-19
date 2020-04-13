@@ -1,8 +1,6 @@
 .main-nav {
   position: relative;
-}
 
-.main-nav__wrapper {
   .subtitle();
   line-height: 32px;
   color: @base-light-color;
@@ -49,5 +47,11 @@
     &::after {
       top: 16px;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
   }
 }

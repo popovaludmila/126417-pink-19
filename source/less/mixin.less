@@ -10,22 +10,16 @@
   font-weight: 700;
 }
 
-.text {
+.text() {
   font-family: inherit;
   font-size: 14px;
   line-height: 24px;
   color: @base-color;
 }
 
-.add-text {
+.add-text() {
   font-family: inherit;
   font-size: 12px;
-}
-
-.container() {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .list() {
@@ -49,4 +43,28 @@
 
   border: none;
   outline: none;
+}
+
+.mobile-wrapper() {
+  width: 320px;
+
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tablet-wrapper() {
+  width: 620px;
+
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.desktop-wrapper() {
+  width: 940px;
+
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -4,6 +4,15 @@
   background-color: @base-color;
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
 .page-header__logo {
   display: block;
   border-bottom: 1px solid @base-dark-color;
@@ -12,4 +21,26 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    background-color: #000000;
+    opacity: 0.3;
+  }
+
+  .page-header__wrapper {
+    .tablet-wrapper();
+  }
+
+  .page-header__logo {
+    border-bottom: none;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    .desktop-wrapper();
+  }
 }
