@@ -1,9 +1,8 @@
 .advantages__item {
   position: relative;
 
-  width: 280px;
-
   padding-bottom: 30px;
+
   margin: 0 auto;
 
   text-align: center;
@@ -36,10 +35,18 @@
 
 .advantages__title {
   .subtitle();
-  margin-top: 0;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .advantages__text {
   .text();
   margin: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
