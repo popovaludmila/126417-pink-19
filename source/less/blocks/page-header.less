@@ -24,23 +24,35 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    background-color: #000000;
-    opacity: 0.3;
-  }
-
-  .page-header__wrapper {
-    .tablet-wrapper();
-  }
-
   .page-header__logo {
-    border-bottom: none;
-    box-shadow: none;
+    padding-bottom: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   .page-header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 35px;
+
     .desktop-wrapper();
+  }
+
+  .page-header__logo {
+    width: 150px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
+    box-shadow: none;
   }
 }

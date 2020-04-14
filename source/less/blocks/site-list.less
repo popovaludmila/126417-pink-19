@@ -6,6 +6,8 @@
     color: @base-light-color;
 
     &--current {
+      padding-bottom: 5px;
+
       color: @base-light-color;
 
       border-bottom: 2px solid @base-light-color;
@@ -32,6 +34,24 @@
   }
 
   &:last-child {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 620px;
+  }
+
+  .site-list__item {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    border-bottom: none;
     box-shadow: none;
   }
 }
