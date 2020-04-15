@@ -47,8 +47,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .information__wrapper {
+    .tablet-wrapper();
+  }
+
   .information__container {
-    width: 620px;
+    .tablet-wrapper();
 
     padding-top: 50px;
     padding-bottom: 90px;
