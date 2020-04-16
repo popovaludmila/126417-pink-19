@@ -69,6 +69,21 @@
 }
 
 .edit__icon {
+  &--crop {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
   & path,
   & rect {
     opacity: 0.3;
@@ -95,6 +110,8 @@
 
 .edit__button-container {
   padding-top: 40px;
+
+  width: 280px;
 
   border-top: 2px solid #dddfe0;
 }
@@ -144,5 +161,99 @@
       background-color: @base-color;
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .edit {
+    padding-bottom: 0;
+  }
+
+  .edit__list {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .edit__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 275px;
+
+    margin-right: 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-bottom: 2px solid #dddfe0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .edit__range {
+    display: block;
+    width: 202px;
+
+    margin-right: 18px;
+
+    &--common {
+      display: none;
+    }
+  }
+
+  .edit__toggle {
+    &--crop {
+      right: 42px;
+      top: -6px;
+    }
+
+    &--fill {
+      left: 25px;
+      top: -6px;
+    }
+
+    &--contrast {
+      right: 92px;
+      top: -6px;
+    }
+  }
+
+  .edit__icon {
+    &--crop {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill {
+      width: 24px;
+      height: 22px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .edit__button {
+    width: 260px;
+
+    margin-bottom: 24px;
+
+    &--grey {
+      margin-bottom: 0;
+    }
+  }
+
+  .edit__button-container {
+    padding-top: 67px;
+
+    width: 280px;
+
+    border-top: 0;
   }
 }
