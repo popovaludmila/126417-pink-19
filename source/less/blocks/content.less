@@ -29,7 +29,7 @@
 }
 
 .content__text {
-  padding: 20px;
+  padding: 20px 15px;
 
   .text();
   background-color: @grey-bg-color;
@@ -74,4 +74,56 @@
   .add-text();
   color: @add-color;
   text-transform: uppercase;
+}
+
+
+@media (min-width: @tablet-width) {
+  .content__text {
+    position: relative;
+
+    padding: 25px 30px;
+
+    &--panorama {
+      position: relative;
+
+      width: 660px;
+      margin: 0 auto;
+    }
+  }
+
+  .content__rate {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+
+    &--panorama {
+      position: absolute;
+      z-index: 1;
+
+      top: 10px;
+      right: 60px;
+    }
+  }
+
+  .content__likes-button {
+    &--panorama {
+      order: 2;
+    }
+  }
+
+  .content__likes-count {
+    &--panorama {
+      order: 1;
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .content__text {
+    &--panorama {
+      width: 960px;
+    }
+  }
 }
