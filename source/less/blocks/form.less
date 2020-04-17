@@ -29,10 +29,19 @@
   }
 }
 
-.form__text {
+.form__intro {
   .mobile-wrapper();
 
   text-align: center;
+}
+
+.form__text {
+  .text();
+  margin: 0;
+
+  &--add {
+    display: none;
+  }
 }
 
 .form__fieldset {
@@ -137,6 +146,8 @@
 .form__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .mobile-wrapper();
 }
 
@@ -182,7 +193,7 @@
   .form {
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
+    padding-top: 95px;
   }
 
   .form__group {
@@ -215,12 +226,20 @@
     }
   }
 
-  .form__text {
+  .form__intro {
     .tablet-wrapper();
+  }
+
+  .form__text {
+    padding-left: 60px;
+    padding-right: 60px;
 
     font-size: 18px;
     line-height: 30px;
-    text-align: center;
+
+    &--add {
+      display: inline;
+    }
   }
 
   .form__fieldset {
@@ -318,5 +337,12 @@
   .form__notification {
     padding-top: 0;
     padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
