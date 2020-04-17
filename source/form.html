@@ -50,19 +50,19 @@
         вашу бонусную карту!</p>
       <div class="form__group form__group--one">
         <fieldset class="form__fieldse form__fieldset--one">
-          <div class="form__field-wrapper">
-            <label class="form__label form__label--red" for="last-name">Фамилия:</label>
-            <input class="form__input" name="last" id="last-name" type="text" required="required"
+          <div class="form__field-wrapper form__field-wrapper--one">
+            <label class="form__label form__label--one form__label--red" for="last-name">Фамилия:</label>
+            <input class="form__input form__input--one" name="last" id="last-name" type="text" required="required"
               placeholder="Укажите фамилию">
           </div>
-          <div class="form__field-wrapper">
-            <label class="form__label form__label--red" for="user-name">Имя</label>
-            <input class="form__input" name="name" id="user-name" type="text" required="required"
+          <div class="form__field-wrapper form__field-wrapper--one">
+            <label class="form__label form__label--one form__label--red" for="user-name">Имя</label>
+            <input class="form__input form__input--one" name="name" id="user-name" type="text" required="required"
               placeholder="Введите ваше имя">
           </div>
-          <div class="form__field-wrapper">
-            <label class="form__label form__label--red" for="patronymic-name">Отчество</label>
-            <input class="form__input" name="patronymic" id="patronymic-name" type="text"
+          <div class="form__field-wrapper form__field-wrapper--one">
+            <label class="form__label form__label--one form__label--red" for="patronymic-name">Отчество</label>
+            <input class="form__input form__input--one" name="patronymic" id="patronymic-name" type="text"
               placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
@@ -99,15 +99,16 @@
         </fieldset>
       </div>
       <div class="form__group form__group--three">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--three">
           <legend class="form__legend form__legend--contacts">Контактная информация</legend>
-          <div class="form__field-wrapper">
-            <label class="form__label form__label--red" for="phone">Номер телефона</label>
-            <input class="form__input" id="phone" name="number" type="text" placeholder="Номер, пожалуйста">
+          <div class="form__field-wrapper form__field-wrapper--three">
+            <label class="form__label form__label--three form__label--red" for="phone">Номер телефона</label>
+            <input class="form__input form__input--three" id="phone" name="number" type="text"
+              placeholder="Номер, пожалуйста">
           </div>
-          <div class="form__field-wrapper">
-            <label class="form__label form__label--red" for="email">Адрес почты</label>
-            <input class="form__input" id="email" name="mail" type="text" placeholder="Введите почту"
+          <div class="form__field-wrapper form__field-wrapper--three">
+            <label class="form__label form__label--three form__label--red" for="email">Адрес почты</label>
+            <input class="form__input form__input--three" id="email" name="mail" type="text" placeholder="Введите почту"
               required="required">
           </div>
         </fieldset>
@@ -132,10 +133,12 @@
         </fieldset>
       </div>
       <div class="form__group form__group--five">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--five">
           <legend class="form__legend">Опишите свои эмоции</legend>
-          <textarea class="form__textarea" name="textarea" id="emotion" cols="25"
-            rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <div class="form__field-wrapper form__field-wrapper--five">
+            <textarea class="form__textarea" name="textarea" id="emotion" cols="25"
+              rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </div>
         </fieldset>
       </div>
       <div class="form__container">
