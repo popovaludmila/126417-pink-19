@@ -49,7 +49,7 @@
       <div class="form__intro">
         <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
           вашу бонусную карту!</p>
-          <span class=" form__text form__text--add">Пожалуйста, заполните форму ниже:</span>
+        <span class=" form__text form__text--add">Пожалуйста, заполните форму ниже:</span>
       </div>
       <div class="form__group form__group--one">
         <fieldset class="form__fieldse form__fieldset--one">
@@ -104,15 +104,23 @@
       <div class="form__group form__group--three">
         <fieldset class="form__fieldset form__fieldset--three">
           <legend class="form__legend form__legend--contacts">Контактная информация</legend>
-          <div class="form__field-wrapper form__field-wrapper--three">
-            <label class="form__label form__label--three form__label--red" for="phone">Номер телефона</label>
-            <input class="form__input form__input--three" id="phone" name="number" type="text"
-              placeholder="Номер, пожалуйста">
-          </div>
-          <div class="form__field-wrapper form__field-wrapper--three">
-            <label class="form__label form__label--three form__label--red" for="email">Адрес почты</label>
-            <input class="form__input form__input--three" id="email" name="mail" type="text" placeholder="Введите почту"
-              required="required">
+          <div class="form__fieldset-container">
+            <div class="form__field-wrapper form__field-wrapper--three">
+              <label class="form__label form__label--three form__label--red" for="phone">Номер телефона</label>
+              <input class="form__input form__input--three" id="phone" name="number" type="text"
+                placeholder="Номер, пожалуйста">
+                <button class="form__btn form__btn--number">
+                  <span class="visually-hidden">Телефон</span>
+                </button>
+            </div>
+            <div class="form__field-wrapper form__field-wrapper--three">
+              <label class="form__label form__label--three form__label--red" for="email">Адрес почты</label>
+              <input class="form__input form__input--three" id="email" name="mail" type="text"
+                placeholder="Введите почту" required="required">
+                <button class="form__btn form__btn--email">
+                  <span class="visually-hidden">Почта</span>
+                </button>
+            </div>
           </div>
         </fieldset>
       </div>
@@ -224,13 +232,13 @@
     </div>
   </footer>
 
-  <div class="modal modal--error">
+  <div class="modal modal--error visually-hidden">
     <b class="modal__title">Что-то пошло не так!</b>
     <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="modal__button button">Ок</button>
   </div>
 
-  <div class="modal modal--success">
+  <div class="modal modal--success visually-hidden">
     <div class="modal__content">
       <b class="modal__title">Ваша заявка отправлена</b>
       <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы

@@ -187,6 +187,10 @@
   & sup {
     color: @add-color;
   }
+
+  .form__btn {
+    .visually-hidden();
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -396,7 +400,10 @@
 
   .form__field-wrapper {
     &--three {
+      position: relative;
       width: 375px;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 
@@ -413,5 +420,38 @@
 
   .form__label:not(.form__label--red) {
     font-size: 18px;
+  }
+
+  .form__fieldset-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+
+  .form__btn {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: #e5e5e5;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    outline: none;
+    border: 0;
+
+    &--number {
+      background-image: url("../img/icon-phone.svg");
+    }
+
+    &--email {
+      background-image: url("../img/icon-mail.svg");
+    }
   }
 }
