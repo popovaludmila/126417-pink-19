@@ -204,6 +204,7 @@
     &--one {
       order: 1;
       padding-top: 0;
+      padding-bottom: 0;
     }
 
     &--two {
@@ -213,12 +214,13 @@
 
     &--three {
       order: 3;
-      padding-top: 0;
+      padding-top: 30px;
     }
 
     &--four {
       order: 2;
       background-color: @base-light-color;
+      padding-top: 0;
     }
 
     &--five {
@@ -228,6 +230,7 @@
 
   .form__intro {
     .tablet-wrapper();
+    padding-bottom: 50px;
   }
 
   .form__text {
@@ -259,7 +262,7 @@
       flex-direction: row;
       align-items: center;
 
-      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     &--three {
@@ -342,7 +345,74 @@
 
 @media (min-width: @desktop-width) {
   .form {
+    .desktop-wrapper();
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .form__intro {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form__group {
+    width: 433px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+
+    &--three {
+      width: 100%;
+    }
+
+    &--two {
+      width: 100%;
+    }
+
+    &--five {
+      width: 100%;
+    }
+  }
+
+  .form__fieldset {
+    width: 100%;
+
+    &--three {
+      flex-direction: row;
+    }
+  }
+
+  .form__list {
+    &--radio {
+      padding-left: 70px;
+    }
+
+    &--checkbox {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form__field-wrapper {
+    &--three {
+      width: 375px;
+    }
+  }
+
+  .form__container {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .form__input {
+    font-size: 18px;
+  }
+
+  .form__label:not(.form__label--red) {
+    font-size: 18px;
   }
 }
