@@ -35,6 +35,21 @@
 
 @media (min-width: @desktop-width) {
   .checkbox {
-    width: 33.333333%;
+    &:nth-child(4),
+    &:nth-child(6) {
+      column-break-before: auto;
+    }
+
+    &:nth-child(3),
+    &:nth-child(5) {
+      margin-top: 0;
+    }
+  }
+
+  .checkbox__label {
+    &::before {
+      margin-top: 0;
+      margin-right: 20px;
+    }
   }
 }
