@@ -30,7 +30,7 @@
   background-color: @base-color;
 
   &--title {
-    display: none;
+    .visually-hidden();
   }
 }
 
@@ -50,7 +50,7 @@
   background-color: @base-color;
 
   &--title {
-    display: none;
+    .visually-hidden();
   }
 }
 
@@ -71,7 +71,7 @@
   text-transform: uppercase;
 
   &--title {
-    display: none;
+    .visually-hidden();
 
     text-align: center;
   }
@@ -117,9 +117,10 @@
     width: 155px;
 
     &--title {
-      display: block;
+      display: table;
 
-      background-color: @grey-bg-color;
+      color: transparent;
+      background-color: transparent;
       border: none;
       font-size: 0;
     }
@@ -129,9 +130,9 @@
     width: 155px;
 
     &--title {
-      display: block;
+      display: table;
 
-      background-color: @grey-bg-color;
+      background-color: transparent;
       border: none;
       font-size: 0;
     }
@@ -148,7 +149,8 @@
     text-align: left;
 
     &--title {
-      display: block;
+      position: relative;
+      display: table;
 
       padding-top: 15px;
       padding-bottom: 15px;

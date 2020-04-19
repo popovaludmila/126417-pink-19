@@ -17,7 +17,7 @@
 }
 
 .reviews__prof {
-  display: none;
+  .visually-hidden();
 }
 
 .reviews__text {
@@ -67,11 +67,14 @@
   }
 
   .reviews__prof {
-    display: inline;
+    position: relative;
+
+    display: inline-block;
     order: 3;
 
     margin: 0;
-
+    width: 100%;
+    height: auto;
     .text();
   }
 
@@ -89,7 +92,7 @@
   }
 
   .reviews__toggles {
-    display: none;
+    .visually-hidden();
   }
 
   .reviews__list {
