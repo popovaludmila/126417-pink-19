@@ -35,8 +35,28 @@
   background-color: @grey-bg-color;
 
   &--panorama {
+    position: relative;
     margin-right: 20px;
     margin-left: 20px;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+
+      display: block;
+      padding: 10px 20px;
+      top: -137px;
+      right: 0;
+
+      content: "Панорама дня";
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 24px;
+      color: @base-light-color;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: @add-color;
+    }
   }
 }
 
@@ -88,6 +108,10 @@
 
       width: 660px;
       margin: 0 auto;
+
+      &::before {
+        top: -450px;
+      }
     }
   }
 
