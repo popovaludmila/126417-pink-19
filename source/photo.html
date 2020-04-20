@@ -12,39 +12,36 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
-          alt="Логотип Пинк">
-      </a>
-      <button class="main-nav__toggle visually-hidden" type="button">
-        <span class="main-nav__toggle-item">Открыть меню</span>
-      </button>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link--current" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__inner">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
+            alt="Логотип Пинк">
+        </a>
+        <button class="main-nav__toggle visually-hidden" type="button">
+          <span class="main-nav__toggle-item">Открыть меню</span>
+        </button>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link--current" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
+    <h1 class="page-header__title">Фотографии пользователей</h1>
   </header>
 
   <main class="page-main">
-
-    <div class="intro-photo">
-      <div class="intro-photo__wrapper">
-        <h1 class="intro-photo__title">Фотографии пользователей</h1>
-      </div>
-    </div>
 
     <section class="photos">
       <div class="photos__intro">
@@ -263,8 +260,7 @@
             <li class="edit__item">
               <div class="edit__icon edit__icon--crop edit__icon--current">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                  y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
-                  xml:space="preserve">
+                  y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                   <title>Инструмент для обрезки фото</title>
                   <path fill="none" d="M0,0h48v48H0V0z" />
                   <path class="fill" fill="#231F20"
@@ -279,8 +275,8 @@
             <li class="edit__item">
               <div class="edit__icon edit__icon--fill">
                 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48"
+                  enable-background="new 0 0 48 48" xml:space="preserve">
                   <title>Инструмент для заливки фото</title>
                   <path fill="none" d="M0,0h48v48H0V0z" />
                   <path class="fill" fill="#231F20"
@@ -296,9 +292,8 @@
             <li class="edit__item">
               <div class="edit__icon edit__icon--contrast">
                 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92"
-                  xml:space="preserve">
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-35.422 -7.96 31.92 31.92"
+                  enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
                   <title>Инструмент для изменения контрастности фото</title>
                   <path class="fill" fill="#231F20"
                     d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />

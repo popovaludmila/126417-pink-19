@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #283645;
+        fill: #d22856;
         fill-opacity: 0;
         stroke: #d22856;
         stroke-linejoin: round;
@@ -16,7 +16,7 @@
       <feBlend result="blend" in2="SourceGraphic"/>
     </filter>
   </defs>
-  <g style="fill: #283645; filter: url(#filter)">
+  <g style="fill: #d22856; filter: url(#filter)">
     <circle id="slider_copy_2" data-name="slider copy 2" class="cls-1" cx="8" cy="8" r="7" style="stroke: inherit; filter: none; fill: inherit"/>
   </g>
   <use xlink:href="#slider_copy_2" style="stroke: #d22856; filter: none; fill: none"/>

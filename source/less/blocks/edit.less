@@ -45,7 +45,9 @@
 
 .edit__toggle {
   position: absolute;
+  z-index: 1;
 
+  display: block;
   width: 14px;
   height: 14px;
 
@@ -56,6 +58,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: @grey-bg-color;
+
+  cursor: pointer;
 
   &:focus,
   &:active {
