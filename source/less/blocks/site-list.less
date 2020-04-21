@@ -1,6 +1,7 @@
 .site-list {
   .list();
   text-align: center;
+  border-top: 1px solid @base-dark-color;
 
   &__link {
     color: @base-light-color;
@@ -19,8 +20,8 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid @base-dark-color;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.15);
 
   &:hover .site-list__link,
   &:focus .site-list__link {
@@ -31,10 +32,6 @@
     color: @base-light-color;
 
     opacity: 0.3;
-  }
-
-  &:last-child {
-    box-shadow: none;
   }
 }
 

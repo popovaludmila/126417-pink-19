@@ -3,7 +3,7 @@
 
   background-color: @base-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: center -75px;
+  background-position: top -65px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11,13 +11,16 @@
 .page-header__wrapper {
   width: 100%;
 
+  background-color: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
+
+  &--opened {
+    background-color: @base-color;
+  }
 }
 
 .page-header__logo {
   display: block;
-  border-bottom: 1px solid @base-dark-color;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.15);
 
   padding-top: 20px;
   padding-bottom: 20px;
