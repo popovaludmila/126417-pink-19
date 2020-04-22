@@ -13,36 +13,37 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
-          alt="Логотип Пинк">
-      </a>
-      <button class="main-nav__toggle visually-hidden" type="button">
-        <span class="main-nav__toggle-item">Открыть меню</span>
-      </button>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link--current">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__inner page-header__inner--opened">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
+            alt="Логотип Пинк">
+        </a>
+        <nav class="main-nav main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="main-nav__toggle-item">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link--current">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </header>
+    <div class="page-header__intro intro">
+      <h1 class="visually-hidden">Приложение для редактирования фото "Пинк"</h1>
 
-  <main class="page-main">
-    <h1 class="visually-hidden">Приложение для редактирования фото "Пинк"</h1>
-
-    <section class="intro">
       <div class="intro__wrapper">
         <div class="intro__content">
           <h2 class="visually-hidden">Скачать приложение на своё устройство</h2>
@@ -76,6 +77,10 @@
         </div>
       </div>
     </section>
+
+  </header>
+
+  <main class="page-main">
 
     <section class="information">
       <div class="information__content">
