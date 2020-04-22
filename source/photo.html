@@ -271,7 +271,7 @@
             <div class="upload__edit edit">
               <ul class="edit__list">
                 <li class="edit__item">
-                  <div class="edit__icon edit__icon--crop edit__icon--current">
+                  <button class="edit__icon edit__icon--crop edit__icon--current" type="button">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                       x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                       <title>Инструмент для обрезки фото</title>
@@ -279,14 +279,11 @@
                       <path class="fill" fill="#231F20"
                         d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
                     </svg>
-                  </div>
-                  <div class="edit__range">
-                    <div class="edit__scale"></div>
-                    <div class="edit__toggle edit__toggle--crop"></div>
-                  </div>
+                  </button>
+                  <input class="edit__range" type="range" min="0" max="100">
                 </li>
                 <li class="edit__item">
-                  <div class="edit__icon edit__icon--fill">
+                  <button class="edit__icon edit__icon--fill" type="button">
                     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48"
                       enable-background="new 0 0 48 48" xml:space="preserve">
@@ -296,14 +293,11 @@
                         d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
                       <rect fill="##231F20" y="40" width="48" height="3" />
                     </svg>
-                  </div>
-                  <div class="edit__range">
-                    <div class="edit__scale"></div>
-                    <div class="edit__toggle edit__toggle--fill"></div>
-                  </div>
+                  </button>
+                  <input class="edit__range" type="range" min="0" max="100">
                 </li>
                 <li class="edit__item">
-                  <div class="edit__icon edit__icon--contrast">
+                  <button class="edit__icon edit__icon--contrast" type="button">
                     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-35.422 -7.96 31.92 31.92"
                       enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
@@ -313,19 +307,15 @@
                       <path class="fill" fill="#231F20"
                         d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
                     </svg>
-                  </div>
-                  <div class="edit__range">
-                    <div class="edit__scale"></div>
-                    <div class="edit__toggle edit__toggle--contrast"></div>
-                  </div>
+                  </button>
+                  <input class="edit__range" type="range" min="0" max="100">
                 </li>
               </ul>
-              <div class="edit__range edit__range--common">
-                <div class="edit__scale edit__scale-common"></div>
-                <div class="edit__toggle edit__toggle--common"></div>
+              <div class="edit__input">
+                <input class="edit__range edit__range--common" type="range" min="0" max="100">
               </div>
               <div class="edit__button-container">
-                <button class="edit__button edit__button--red" type="button">Запостить</button>
+                <button class="edit__button edit__button--red" type="submit">Запостить</button>
                 <button class="edit__button edit__button--grey" type="reset">Отмена</button>
               </div>
             </div>
