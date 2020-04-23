@@ -280,7 +280,7 @@
                           d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
                       </svg>
                     </button>
-                    <input class="edit__range" type="range" min="0" max="100">
+                    <input class="edit__range edit__range--crop" name="crop" type="range" min="0" max="100" value="75">
                   </li>
                   <li class="edit__item">
                     <button class="edit__icon edit__icon--fill" type="button">
@@ -294,7 +294,7 @@
                         <rect fill="##231F20" y="40" width="48" height="3" />
                       </svg>
                     </button>
-                    <input class="edit__range" type="range" min="0" max="100">
+                    <input class="edit__range edit__range--fill" name="fill" type="range" min="0" max="100" value="16">
                   </li>
                   <li class="edit__item">
                     <button class="edit__icon edit__icon--contrast" type="button">
@@ -308,11 +308,11 @@
                           d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
                       </svg>
                     </button>
-                    <input class="edit__range" type="range" min="0" max="100">
+                    <input class="edit__range edit__range--contrast" name="contrast" type="range" min="0" max="100" value="51">
                   </li>
                 </ul>
                 <div class="edit__input">
-                  <input class="edit__range edit__range--common" type="range" min="0" max="100">
+                  <input class="edit__range edit__range--common"  value="83" type="range" min="0" max="100">
                 </div>
                 <div class="edit__button-container">
                   <button class="edit__button edit__button--red" type="submit">Запостить</button>
