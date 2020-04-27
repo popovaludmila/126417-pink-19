@@ -1,9 +1,13 @@
 .content {
+  margin: 0;
   margin-bottom: 20px;
+
+  background-color: @grey-bg-color;
 
   &--panorama {
     margin-left: 0;
     margin-right: 0;
+    background-color: @base-light-color;
   }
 }
 
@@ -28,15 +32,38 @@
   border: 0;
 }
 
+.container--panorama {
+  max-width: 280px;
+  background-color: @grey-bg-color;
+}
+
 .content__text {
-  padding: 20px;
+  padding: 20px 15px;
+  padding-bottom: 10px;
 
   .text();
-  background-color: @grey-bg-color;
 
   &--panorama {
-    margin-right: 20px;
-    margin-left: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+
+      display: block;
+      padding: 10px 20px;
+      top: -137px;
+      right: 0;
+
+      content: "Панорама дня";
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 24px;
+      color: @base-light-color;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: @add-color;
+    }
   }
 }
 
@@ -58,20 +85,84 @@
 
 .content__rate {
   display: flex;
-
-  padding-top: 10px;
+  padding: 15px;
+  padding-top: 0;
 }
 
 .content__likes-button {
+  padding: 0;
   border: 0;
   background-color: transparent;
 }
 
 .content__likes-count {
   margin: 0;
-  padding-left: 10px;
+  padding-left: 20px;
 
   .add-text();
   color: @add-color;
   text-transform: uppercase;
+}
+
+
+@media (min-width: @tablet-width) {
+  .content__img--panorama {
+    height: 500px;
+  }
+
+  .container--panorama {
+    max-width: 620px;
+    position: relative;
+  }
+
+  .content__text {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    padding-bottom: 15px;
+
+    &--panorama {
+      &::before {
+        top: -450px;
+      }
+    }
+  }
+
+  .content__rate {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-bottom: 25px;
+    padding-top: 0;
+    margin-top: auto;
+
+    &--panorama {
+      position: absolute;
+      z-index: 1;
+
+      padding: 0;
+      top: 25px;
+      right: 30px;
+    }
+  }
+
+  .content__likes-button {
+    &--panorama {
+      order: 2;
+    }
+  }
+
+  .content__likes-count {
+    &--panorama {
+      order: 1;
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container--panorama {
+    max-width: 940px;
+  }
 }

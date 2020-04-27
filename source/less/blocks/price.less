@@ -2,39 +2,91 @@
   background-color: @grey-bg-color;
 }
 
+.price__wrapper {
+  padding-top: 60px;
+}
+
+.price__table {
+  position: relative;
+
+  max-width: 320px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
 .price__list {
+  width: 100%;
+  max-width: 280px;
   margin: 0 auto;
   background-color: @base-light-color;
 
   text-align: center;
   border-collapse: collapse;
   vertical-align: middle;
-
-  & td {
-    width: 280px;
-  }
-
-  & th {
-    width: 280px;
-    border: 1px solid @grey-bg-color;
-  }
+  table-layout: fixed;
 }
 
 .price__tariff {
+  width: 280px;
+
   padding-top: 15px;
-  border: 1px solid @grey-bg-color;
+  border: 1px solid #e5e5e5;
   border-bottom: 0;
   border-top: 0;
 
   .subtitle();
   color: @base-light-color;
+  text-transform: uppercase;
 
   background-color: @base-color;
+
+  &--title {
+    position: absolute;
+    z-index: -1;
+    border: 0;
+    font-size: 0;
+    background-color: @grey-bg-color;
+  }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 70px;
+      height: 70px;
+      content: "";
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &::after {
+      position: absolute;
+      left: 10px;
+      top: 30px;
+
+      content: "Хит";
+      .text();
+      font-weight: 400;
+      line-height: 0;
+      color: @base-light-color;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .price__value {
+  width: 280px;
+
   padding-bottom: 15px;
-  border: 1px solid @grey-bg-color;
+  padding-top: 5px;
+  border: 1px solid #e5e5e5;
   border-bottom: 0;
   border-top: 0;
 
@@ -43,19 +95,179 @@
 
   text-transform: uppercase;
   background-color: @base-color;
+
+  &--title {
+    position: absolute;
+    z-index: -1;
+    border: 0;
+    font-size: 0;
+    background-color: @grey-bg-color;
+  }
 }
 
 .price__option {
+  position: relative;
+
+  width: 280px;
+
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 1px solid @grey-bg-color;
+  padding-left: 25px;
 
-  .text();
+  border: 2px solid #e5e5e5;
+  border-collapse: collapse;
+
+  font-size: 0;
+  text-align: left;
   text-transform: uppercase;
+
+  &--title {
+    position: absolute;
+    right: 0;
+    padding-left: 0;
+
+    .text();
+    font-weight: 400;
+    border: 0;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+
+    display: block;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--no::after {
+    width: 27px;
+    height: 27px;
+
+    content: url("../img/icon-no.svg");
+  }
+
+  &--yes::after {
+    width: 31px;
+    height: 21px;
+
+    content: url("../img/icon-yes.svg");
+  }
 }
 
 .price__toggles {
   margin: 0;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .price__wrapper {
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+
+  .price__table {
+    max-width: 620px;
+  }
+
+  .price__list {
+    max-width: 620px;
+  }
+
+  .price__tariff {
+    width: 155px;
+    padding-top: 20px;
+
+    &--title {
+      position: relative;
+      z-index: 1;
+    }
+
+    &--hit {
+      &::before {
+        width: 60px;
+        height: 60px;
+
+        background-image: url("../img/bg-hit-tablet.svg");
+      }
+
+      &::after {
+        top: 22px;
+        left: 5px;
+      }
+    }
+  }
+
+  .price__value {
+    width: 155px;
+
+    &--title {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .price__option {
+    width: 155px;
+
+    padding-left: 15px;
+
+    border: 2px solid #e5e5e5;
+
+    font-size: 0;
+    text-align: left;
+
+    &--title {
+      position: relative;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .text();
+      font-weight: 400;
+      text-transform: initial;
+    }
+
+    &::after {
+      display: block;
+      right: 40%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__wrapper {
+    padding-top: 65px;
+    padding-bottom: 95px;
+  }
+
+  .price__table {
+    max-width: 940px;
+  }
+
+  .price__list {
+    max-width: 940px;
+  }
+
+  .price__tariff {
+    width: 235px;
+  }
+
+  .price__value {
+    width: 235px;
+  }
+
+  .price__option {
+    width: 235px;
+
+    padding-left: 25px;
+
+    font-size: 0;
+
+    &--title {
+      font-size: 18px;
+    }
+  }
 }

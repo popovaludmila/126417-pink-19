@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  position: relative;
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
@@ -20,17 +22,35 @@ body {
   background-color: @base-light-color;
 }
 
-.visually-hidden {
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
+.container {
+  .mobile-wrapper();
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    .tablet-wrapper();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    .desktop-wrapper();
+  }
 }

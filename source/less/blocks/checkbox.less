@@ -1,4 +1,6 @@
 .checkbox__label {
+  padding: 0;
+
   .subtitle();
   font-weight: 400;
 
@@ -9,6 +11,7 @@
     vertical-align: middle;
     content: "";
     margin-right: 30px;
+    margin-top: -4px;
     padding: 0;
 
     background-color: @base-light-color;
@@ -18,7 +21,7 @@
 }
 
 .checkbox__input:checked + .checkbox__label::before {
-  content: url("../img/icon-yes.svg");
+  content: url("../img/icon-yes-2.svg");
   padding-top: 4px;
 }
 
@@ -28,4 +31,25 @@
 
 .checkbox__input:focus + .checkbox__label::before {
   border: 2px solid @add-color;
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox {
+    &:nth-child(4),
+    &:nth-child(6) {
+      column-break-before: auto;
+    }
+
+    &:nth-child(3),
+    &:nth-child(5) {
+      margin-top: 0;
+    }
+  }
+
+  .checkbox__label {
+    &::before {
+      margin-top: 0;
+      margin-right: 20px;
+    }
+  }
 }
