@@ -112,8 +112,13 @@
 
 
 @media (min-width: @tablet-width) {
+  .content {
+    min-height: 555px;
+    margin-bottom: 54px;
+  }
+
   .content__img--panorama {
-    height: 500px;
+    height: 506px;
   }
 
   .container--panorama {
@@ -124,10 +129,12 @@
   .content__text {
     display: flex;
     flex-direction: column;
-    padding: 25px 30px;
-    padding-bottom: 15px;
+    padding: 24px 27px;
+    padding-bottom: 12px;
 
     &--panorama {
+      padding: 24px 17px;
+
       &::before {
         top: -450px;
       }
@@ -137,8 +144,8 @@
   .content__rate {
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    padding-bottom: 25px;
+    padding-left: 27px;
+    padding-bottom: 22px;
     padding-top: 0;
     margin-top: auto;
 
@@ -162,13 +169,39 @@
     &--panorama {
       order: 1;
       padding-left: 0;
-      padding-right: 10px;
+      padding-right: 20px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .content__img {
+    height: 400px;
+
+    &--panorama {
+      height: 506px;
+    }
+  }
+
+  .content--panorama {
+    margin-bottom: 49px;
+  }
+
   .container--panorama {
     max-width: 940px;
+  }
+
+  .content__rate {
+    justify-content: space-between;
+  }
+
+  .content__likes-count {
+    padding-left: 0;
+    order: 1;
+  }
+
+  .content__likes-button {
+    padding-right: 17px;
+    order: 2;
   }
 }
