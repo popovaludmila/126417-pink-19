@@ -113,7 +113,7 @@
 
   .contacts__item {
     width: 300px;
-    padding-top: 40px;
+    padding-top: 55px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -129,21 +129,31 @@
 
   .contacts__title {
     width: 500px;
-    padding-top: 75px;
+    padding-top: 65px;
 
     font-size: 50px;
     line-height: 60px;
   }
 
-  .contacts__item--phone {
-    order: 1;
+  .contacts__item {
+    width: 33.33%;
+
+    &--phone {
+      padding-right: 38px;
+      order: 1;
+    }
+
+    &--email {
+      padding-right: 10px;
+      order: 3;
+    }
+
+    &--address {
+      order: 2;
+    }
   }
 
-  .contacts__item--email {
-    order: 3;
-  }
-
-  .contacts__item--address {
-    order: 2;
+  .contacts__text {
+    padding-bottom: 23px;
   }
 }
