@@ -45,11 +45,29 @@
 
 .download__item {
   &:first-child {
-    padding-left: 15px;
+    padding-left: 28px;
   }
 
   &:nth-child(3) {
-    padding-right: 15px;
+    padding-right: 28px;
+  }
+}
+
+.download__link {
+  display: block;
+
+  cursor: pointer;
+
+  &--ios {
+    height: 57px;
+  }
+
+  &--android {
+    height: 47px;
+  }
+
+  &--windows {
+    height: 42px;
   }
 }
 
@@ -89,7 +107,7 @@
 
 @media (min-width: @desktop-width) {
   .download__wrapper {
-    padding-top: 50px;
+    padding-top: 52px;
   }
 
   .download__button {
@@ -98,6 +116,6 @@
 
   .download__list {
     padding-top: 65px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 }
