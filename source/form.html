@@ -68,8 +68,7 @@
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="form__intro">
         <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
-          вашу бонусную карту!</p>
-        <span class=" form__text form__text--add">Пожалуйста, заполните форму ниже:</span>
+          вашу бонусную карту! <span class="form__text form__text--add">Пожалуйста, заполните форму ниже:</span></p>
       </div>
       <div class="form__group form__group--one">
         <fieldset class="form__fieldse form__fieldset--one">
@@ -83,7 +82,7 @@
             <input class="form__input form__input--one" name="name" id="user-name" type="text" required="required"
               placeholder="Введите ваше имя">
           </div>
-          <div class="form__field-wrapper form__field-wrapper--one">
+          <div class="form__field-wrapper form__field-wrapper--one form__field-wrapper--patronymic">
             <label class="form__label form__label--one form__label--red" for="patronymic-name">Отчество</label>
             <input class="form__input form__input--one" name="patronymic" id="patronymic-name" type="text"
               placeholder="Ну и отчество тоже">
@@ -168,13 +167,13 @@
           <legend class="form__legend">Опишите свои эмоции</legend>
           <div class="form__field-wrapper form__field-wrapper--five">
             <textarea class="form__textarea" name="textarea" id="emotion" cols="25"
-              rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
+              rows="3">Можно прям в красках, не стесняясь в выражениях</textarea>
           </div>
         </fieldset>
       </div>
       <div class="form__container">
         <button class="form__button" type="submit">Отправить форму</button>
-        <p class="form__notification"><sup>*</sup> — обязательные поля</p>
+        <p class="form__notification"><sup>*</sup> — обязательные <span class="form__notification form__notification--add">для заполнения</span> поля</p>
       </div>
     </form>
   </main>
