@@ -20,10 +20,6 @@
   }
 }
 
-.edit__form {
-  width: 100%;
-}
-
 .edit__input {
   width: 240px;
   height: 2px;
@@ -181,7 +177,6 @@
   .edit {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
     padding-bottom: 0;
   }
@@ -209,6 +204,10 @@
     &:first-child {
       padding-top: 0;
     }
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
   }
 
   .edit__input {
@@ -226,6 +225,7 @@
     overflow: visible;
     outline: none;
     appearance: none;
+    clip-path: none;
 
     &::-webkit-slider-runnable-track {
       width: 100%;
@@ -266,6 +266,11 @@
       width: 16px;
       height: 16px;
     }
+
+    & .fill {
+      fill: @add-color;
+      opacity: 1;
+    }
   }
 
   .edit__button {
@@ -291,7 +296,7 @@
   .edit__item {
     width: 410px;
 
-    padding-bottom: 13px;
+    padding-bottom: 12px;
     padding-top: 15px;
     border-bottom: 2px solid #dddfe0;
   }
@@ -316,6 +321,7 @@
     &--contrast {
       width: 32px;
       height: 32px;
+      padding-left: 4px;
     }
   }
 
@@ -340,5 +346,8 @@
     padding-right: 0;
     padding-left: 0;
     border-top: 0;
+    padding-top: 0;
+
+    margin-top: auto;
   }
 }
