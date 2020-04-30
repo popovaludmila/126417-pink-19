@@ -50,14 +50,17 @@
     &--main {
       position: absolute;
       z-index: 1;
+      display: block;
       bottom: 0;
 
       width: 100%;
       height: auto;
       margin: 0;
 
+      background-color: @base-light-color;
       overflow: visible;
       clip: auto;
+      clip-path: none;
     }
   }
 
@@ -81,7 +84,20 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    padding-top: 95px;
+    padding-top: 70px;
     padding-bottom: 70px;
+
+    &--photo {
+      padding-top: 100px;
+    }
+  }
+
+  .page-footer__social {
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  .page-footer__logo {
+    align-self: start;
   }
 }
