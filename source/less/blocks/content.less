@@ -1,6 +1,6 @@
 .content {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   background-color: @grey-bg-color;
 
@@ -33,6 +33,7 @@
   border: 0;
 
   &--panorama {
+
     object-fit: cover;
     object-position: center;
   }
@@ -40,24 +41,32 @@
 
 .container--panorama {
   max-width: 280px;
+
+  padding-left: 17px;
+  padding-right: 12px;
   background-color: @grey-bg-color;
 }
 
 .content__text {
-  padding: 20px 15px;
-  padding-bottom: 10px;
+  padding-top: 21px;
+  padding-bottom: 9px;
+  padding-left: 17px;
+  padding-right: 15px;
 
   .text();
 
   &--panorama {
     position: relative;
+    padding-top: 17px;
+    padding-right: 0;
+    padding-left: 0;
 
     &::before {
       position: absolute;
       z-index: 1;
 
       display: block;
-      padding: 10px 20px;
+      padding: 5px 20px;
       top: -137px;
       right: 0;
 
@@ -91,8 +100,13 @@
 
 .content__rate {
   display: flex;
-  padding: 15px;
+  padding: 19px;
   padding-top: 0;
+
+  &--panorama {
+    padding-left: 0;
+    padding-right: 10px;
+  }
 }
 
 .content__likes-button {
@@ -113,12 +127,20 @@
 
 @media (min-width: @tablet-width) {
   .content {
-    min-height: 555px;
-    margin-bottom: 54px;
+    min-height: 455px;
+    margin-bottom: 19px;
+
+    &--panorama {
+      margin-bottom: 51px;
+    }
   }
 
-  .content__img--panorama {
-    height: 506px;
+  .content__img {
+    height: 300px;
+
+    &--panorama {
+      height: 510px;
+    }
   }
 
   .container--panorama {
@@ -133,7 +155,10 @@
     padding-bottom: 12px;
 
     &--panorama {
-      padding: 24px 17px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 23px;
+      padding-bottom: 24px;
 
       &::before {
         top: -450px;
@@ -143,6 +168,7 @@
 
   .content__rate {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-left: 27px;
     padding-bottom: 22px;
@@ -160,21 +186,35 @@
   }
 
   .content__likes-button {
+    padding-right: 17px;
+    order: 2;
+
     &--panorama {
-      order: 2;
+      padding-right: 0;
     }
   }
 
   .content__likes-count {
+    order: 1;
+    padding-left: 0;
+
     &--panorama {
-      order: 1;
-      padding-left: 0;
-      padding-right: 20px;
+      padding-right: 13px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .content {
+    min-height: 555px;
+
+    margin-bottom: 55px;
+
+    &--panorama {
+      margin-bottom: 51px;
+    }
+  }
+
   .content__img {
     height: 400px;
 
@@ -183,25 +223,19 @@
     }
   }
 
-  .content--panorama {
-    margin-bottom: 49px;
-  }
-
   .container--panorama {
     max-width: 940px;
   }
 
-  .content__rate {
-    justify-content: space-between;
-  }
-
   .content__likes-count {
-    padding-left: 0;
-    order: 1;
+    padding-right: 20px;
   }
 
   .content__likes-button {
-    padding-right: 17px;
-    order: 2;
+    padding-right: 13px;
+
+    &--panorama {
+      padding-right: 0;
+    }
   }
 }
