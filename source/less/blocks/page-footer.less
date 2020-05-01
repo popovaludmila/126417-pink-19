@@ -70,11 +70,16 @@
     align-items: center;
 
     padding-top: 35px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+  }
+
+  .page-footer__logo {
+    align-self: flex-start;
   }
 
   .page-footer__social {
     padding-top: 0;
+    padding-right: 15px;
   }
 
   .page-footer__copyright {
@@ -83,21 +88,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer__wrapper {
-    padding-top: 70px;
-    padding-bottom: 70px;
-
-    &--photo {
-      padding-top: 100px;
-    }
-  }
-
-  .page-footer__social {
+ .page-footer__social {
     padding-left: 15px;
     padding-top: 5px;
-  }
-
-  .page-footer__logo {
-    align-self: start;
   }
 }
