@@ -25,10 +25,11 @@
 }
 
 .page-header__logo {
-  display: block;
+  display: flex;
+  align-items: baseline;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 22px;
+  padding-bottom: 25px;
   padding-left: 20px;
 }
 
@@ -39,7 +40,6 @@
 
 .page-header__intro {
   width: 250px;
-  min-height: 170px;
   margin: 0 auto;
 
   text-align: center;
@@ -47,6 +47,7 @@
 
 .page-header__title {
   padding-top: 30px;
+  padding-bottom: 80px;
   margin: 0;
 
   .title();
@@ -60,7 +61,8 @@
   }
 
   .page-header__logo {
-    padding-bottom: 35px;
+    padding-top: 30px;
+    padding-bottom: 40px;
   }
 
   .page-header__logo-image {
@@ -69,12 +71,12 @@
   }
 
   .page-header__intro {
-    min-height: 330px;
     width: 500px;
   }
 
   .page-header__title {
-    padding-top: 80px;
+    padding-top: 68px;
+    padding-bottom: 140px;
 
     font-size: 50px;
     line-height: 60px;
@@ -97,7 +99,7 @@
     align-items: center;
 
     .desktop-wrapper();
-    padding-top: 30px;
+    padding-top: 35px;
     padding-bottom: 35px;
     background-color: transparent;
   }
@@ -109,7 +111,6 @@
   }
 
   .page-header__intro {
-    min-height: 282px;
     width: 550px;
 
     &--form {
@@ -119,5 +120,6 @@
 
   .page-header__title {
     padding-top: 60px;
+    padding-bottom: 104px;
   }
 }
