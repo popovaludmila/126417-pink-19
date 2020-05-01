@@ -3,7 +3,7 @@
 }
 
 .price__wrapper {
-  padding-top: 60px;
+  padding-top: 64px;
 }
 
 .price__table {
@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
-  margin-left: -280px;
+  margin-left: -260px;
 
   background-color: @base-light-color;
 
@@ -32,7 +32,7 @@
 .price__tariff {
   width: 280px;
 
-  padding-top: 15px;
+  padding-top: 20px;
   border: 1px solid #e5e5e5;
   border-bottom: 0;
   border-top: 0;
@@ -125,7 +125,6 @@
   &--title {
     position: absolute;
     right: 0;
-    padding-left: 21px;
 
     .text();
     font-weight: 400;
@@ -159,14 +158,13 @@
 
 .price__toggles {
   margin: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 45px;
 }
 
 @media (min-width: @tablet-width) {
   .price__wrapper {
-    padding-top: 35px;
-    padding-bottom: 70px;
+    padding-top: 38px;
   }
 
   .price__table {
@@ -180,11 +178,14 @@
 
   .price__tariff {
     width: 155px;
-    padding-top: 20px;
+    padding-top: 15px;
+
+    font-size: 16px;
 
     &--title {
       position: relative;
       z-index: 1;
+      color: transparent;
     }
 
     &--hit {
@@ -204,15 +205,22 @@
 
   .price__value {
     width: 155px;
+    padding-bottom: 10px;
+
+    font-size: 18px;
 
     &--title {
       position: relative;
       z-index: 1;
+
+      color: transparent;
     }
   }
 
   .price__option {
     width: 155px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     border: 2px solid #e5e5e5;
 
@@ -221,6 +229,7 @@
 
     &--title {
       position: relative;
+      padding-left: 15px;
 
       .text();
       font-weight: 400;
@@ -233,12 +242,16 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  .price__toggles {
+    padding-bottom: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .price__wrapper {
-    padding-top: 60px;
-    padding-bottom: 93px;
+    padding-top: 62px;
+    padding-bottom: 95px;
   }
 
   .price__table {
@@ -251,18 +264,28 @@
 
   .price__tariff {
     width: 235px;
+    padding-top: 20px;
+
+    font-size: 18px;
   }
 
   .price__value {
     width: 235px;
+    padding-bottom: 25px;
+
+    font-size: 24px;
   }
 
   .price__option {
     width: 235px;
+    padding-top: 15px;
+    padding-bottom: 19px;
 
     font-size: 0;
 
     &--title {
+      padding-left: 20px;
+
       font-size: 18px;
     }
   }
