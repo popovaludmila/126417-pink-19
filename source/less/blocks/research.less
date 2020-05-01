@@ -8,7 +8,12 @@
   .research {
     position: relative;
     z-index: 1;
+    width: auto;
+    height: auto;
+    margin: 0;
 
+    clip-path: none;
+    white-space: normal;
     background-color: @base-light-color;
   }
 
@@ -18,8 +23,8 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 22px;
-    padding-bottom: 68px;
+    padding-top: 57px;
+    padding-bottom: 50px;
   }
 
   .research__content {
@@ -105,6 +110,11 @@
 @media (min-width: @desktop-width) {
   .research {
     background-color: @grey-bg-color;
+  }
+
+  .research__wrapper {
+    padding-top: 22px;
+    padding-bottom: 68px;
   }
 
   .research__content {
