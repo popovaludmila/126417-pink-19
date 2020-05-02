@@ -1,3 +1,11 @@
+.radio {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 17px;
+  }
+}
+
 .radio__label {
   padding: 0;
 
@@ -33,4 +41,11 @@
 
 .radio__input:focus + .radio__label::before {
   border: 2px solid @add-color;
+}
+
+
+@media (min-width: @tablet-width) {
+  .radio__label::before {
+    margin-right: 21px;
+  }
 }
