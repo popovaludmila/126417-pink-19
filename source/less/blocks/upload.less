@@ -4,8 +4,8 @@
 }
 
 .upload__content {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 42px;
 }
 
 .upload__container {
@@ -19,12 +19,13 @@
 
 .upload__text {
   .text();
+  line-height: 30px;
   margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .upload__content {
-    padding-top: 60px;
+    padding-top: 45px;
     padding-bottom: 70px;
   }
 
@@ -37,6 +38,13 @@
     margin: 0 auto;
     padding-top: 57px;
     padding-bottom: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .upload__photo {
+    width: 300px;
+    height: 400px;
   }
 
   .upload__text {
@@ -47,11 +55,13 @@
 
 @media (min-width: @desktop-width) {
   .upload__container {
+    padding-bottom: 65px;
+
     background-color: @base-light-color;
   }
 
   .upload__content {
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 66px;
   }
 
@@ -62,10 +72,5 @@
     padding-right: 60px;
 
     background-color: @grey-bg-color;
-  }
-
-  .upload__photo {
-    width: 300px;
-    height: 400px;
   }
 }
