@@ -12,15 +12,17 @@
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
+      background-position: 50% 0;
       background-image: url("preview/pink-index-mobile-menu.png");
     }
-    @media ( min-width: 660px ) {
+
+    @media (min-width: 660px) {
       HTML {
         background-image: url("preview/pink-index-tablet-menu.png");
       }
     }
-    @media ( min-width: 960px ) {
+
+    @media (min-width: 960px) {
       HTML {
         background-image: url("preview/pink-index-desktop.png");
       }
@@ -35,8 +37,12 @@
     <div class="page-header__wrapper">
       <div class="page-header__inner page-header__inner--opened">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
-            alt="Логотип Пинк">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
+              alt="Логотип Пинк">
+          </picture>
         </a>
         <nav class="main-nav main-nav--opened">
           <button class="main-nav__toggle" type="button">
@@ -216,7 +222,11 @@
 
   <section class="contacts">
     <div class="contacts__map">
-      <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Офис на карте">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg, img/bg-map-desktop@2x.jpg">
+        <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg, img/bg-map-tablet@2x.jpg">
+        <img class="contacts__map-image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg" width="320" height="645" alt="Офис на карте">
+      </picture>
     </div>
     <div class="contacts__wrapper">
       <div class="container">
