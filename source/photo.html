@@ -99,8 +99,8 @@
                 прямую трансляцию в перископе, задавайте свои вопросы</p>
             </div>
             <div class="content__rate content__rate--panorama">
-              <button class="content__likes-button content__likes-button--panorama" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button content__likes-button--panorama" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -127,8 +127,8 @@
               <p class="content__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -155,8 +155,8 @@
               <p class="content__comment">Соседи будут рады!</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -183,8 +183,8 @@
               <p class="content__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -211,8 +211,8 @@
               <p class="content__comment">Самая кубанская в мире!</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -238,8 +238,8 @@
               <p class="content__comment">Где снег-то?</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -266,8 +266,8 @@
               <p class="content__comment">Всем GM и взаимные лайки!</p>
             </div>
             <div class="content__rate">
-              <button class="content__likes-button" type="button">
-                <svg class="content__likes-icon" width="12.545" height="11.99">
+              <button class="content__likes-button" type="button" aria-label="Поставить лайк">
+                <svg class="content__likes-icon" width="12.545" height="11.99" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#likes-icon"></use>
                 </svg>
               </button>
@@ -297,24 +297,24 @@
           <form class="edit" action="https://echo.htmlacademy.ru" method="POST">
             <ul class="edit__list">
               <li class="edit__item">
-                <button class="edit__icon edit__icon--crop" type="button">
-                  <svg class="edit__img edit__img--crop edit__img--current" width="48" height="48">
+                <button class="edit__icon edit__icon--crop" type="button" aria-label="Обрезать фото">
+                  <svg class="edit__img edit__img--crop edit__img--current" width="48" height="48" role="img">
                     <use xlink:href="img/sprite.svg#crop-icon"></use>
                   </svg>
                 </button>
                 <input class="edit__range edit__range--crop" name="crop" type="range" min="0" max="100" value="75">
               </li>
               <li class="edit__item">
-                <button class="edit__icon edit__icon--fill" type="button">
-                  <svg class="edit__img edit__img--fill" width="48" height="48">
+                <button class="edit__icon edit__icon--fill" type="button" aria-label="Изменить заливку">
+                  <svg class="edit__img edit__img--fill" width="48" height="48" role="img">
                     <use xlink:href="img/sprite.svg#fill-icon"></use>
                   </svg>
                 </button>
                 <input class="edit__range edit__range--fill" name="fill" type="range" min="0" max="100" value="16">
               </li>
               <li class="edit__item">
-                <button class="edit__icon edit__icon--contrast" type="button">
-                  <svg class="edit__img edit__img--contrast" width="32" height="32">
+                <button class="edit__icon edit__icon--contrast" type="button" aria-label="Изменить контрастность">
+                  <svg class="edit__img edit__img--contrast" width="32" height="32" role="img">
                     <use xlink:href="img/sprite.svg#contrast-icon"></use>
                   </svg>
                 </button>
@@ -404,7 +404,7 @@
         </div>
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано:</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
             <svg class="copyright__icon" width="26.943" height="34.09">
               <use xlink:href="img/sprite.svg#htmlacademy-icon"></use>
             </svg>
