@@ -17,3 +17,17 @@ navToggle.addEventListener('click', function() {
     headerInner.classList.remove('page-header__inner--opened');
   }
 });
+
+function initMap() {
+  var myMap = new google.maps.Map(document.querySelector('.contacts__map'), {
+    zoom: 18,
+    center: {lat: 59.938635, lng: 30.323118}
+  });
+
+  var image = 'img/icon-map-marker.svg';
+  var marker = new google.maps.Marker({
+    position: {lat: 59.938635, lng: 30.323118},
+    map: myMap,
+    icon: image
+  });
+}
