@@ -20,7 +20,7 @@ navToggle.addEventListener('click', function() {
 
 function initMap() {
   var myMap = new google.maps.Map(document.querySelector('.contacts__map'), {
-    zoom: 18,
+    zoom: 17,
     center: {lat: 59.938635, lng: 30.323118}
   });
 
