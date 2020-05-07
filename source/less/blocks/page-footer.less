@@ -19,40 +19,28 @@
   width: 147px;
   height: 41px;
 
-  &:active {
-    opacity: 0.3;
+  &:hover .page-footer__logo-mobile,
+  &:hover .page-footer__logo-desktop,
+  &:focus .page-footer__logo-mobile,
+  &:focus .page-footer__logo-desktop {
+    fill: @add-color;
   }
 
-  &:active .page-footer__logo-pink {
+  &:active .page-footer__logo-mobile,
+  &:active .page-footer__logo-desktop {
+    opacity: 0.3;
     fill: @base-color;
   }
 }
 
-.page-footer__logo-pink {
+.page-footer__logo-mobile {
   display: block;
+
   fill: @base-color;
 }
 
-.page-footer__logo-glasses {
-  display: block;
-  fill: @add-color;
-
-  &--desktop {
+.page-footer__logo-desktop {
     display: none;
-  }
-}
-
-.page-footer__logo-star {
-  display: none;
-}
-
-.page-footer__logo:hover .page-footer__logo-pink,
-.page-footer__logo:focus .page-footer__logo-pink {
-  fill: @add-color;
-}
-
-.page-footer__logo:active .page-footer__logo-icon path {
-  fill: @base-color;
 }
 
 .page-footer__social {
@@ -118,21 +106,13 @@
     }
   }
 
-  .page-footer__logo-glasses {
-    &--mobile {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+  .page-footer__logo-mobile {
+    display: none;
   }
 
-  .page-footer__logo-star {
+  .page-footer__logo-desktop {
     display: block;
 
-    &--big {
-      fill: @add-color;
-    }
+    fill: @base-color;
   }
 }
