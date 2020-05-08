@@ -132,16 +132,16 @@
         <div class="form__fieldset-container">
           <div class="form__field-wrapper form__field-wrapper--three">
             <label class="form__label form__label--three form__label--red" for="phone">Номер телефона</label>
-            <input class="form__input form__input--three" id="phone" name="number" type="text"
-              placeholder="Номер, пожалуйста">
+            <input class="form__input form__input--three" id="phone" name="number" type="tel"
+              placeholder="Номер, пожалуйста" pattern="[1-9]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" required>
             <button class="form__btn form__btn--number" type="button">
               <span class="visually-hidden">Телефон</span>
             </button>
           </div>
           <div class="form__field-wrapper form__field-wrapper--three">
             <label class="form__label form__label--three form__label--red" for="email">Адрес почты</label>
-            <input class="form__input form__input--three" id="email" name="mail" type="text" placeholder="Введите почту"
-              required="required">
+            <input class="form__input form__input--three" id="email" name="mail" type="email"
+              placeholder="Введите почту" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             <button class="form__btn form__btn--email" type="button">
               <span class="visually-hidden">Почта</span>
             </button>
