@@ -1,11 +1,20 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
-var headerInner = document.querySelector('.page-header__inner');
+var navMain = document.querySelector('.main-nav'),
+  navToggle = document.querySelector('.main-nav__toggle'),
+  headerInner = document.querySelector('.page-header__inner'),
+  modalError = document.querySelector('.modal--error'),
+  modalSuccess = document.querySelector('.modal--success'),
+  formInput = document.querySelectorAll('.form__input'),
+  buttonSubmit = document.querySelector('.form__button'),
+  buttonError = document.getElementById('button-error'),
+  buttonSuccess = document.getElementById('button-success'),
+  inputPhone = document.getElementById('phone'),
+  inputEmail = document.getElementById('email'),
+  form = document.querySelector('.form');
 
 navMain.classList.remove('main-nav--nojs');
 headerInner.classList.remove('page-header__inner--opened');
 
-navToggle.addEventListener('click', function() {
+navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
@@ -22,13 +31,39 @@ navToggle.addEventListener('click', function() {
 function initMap() {
   var myMap = new google.maps.Map(document.querySelector('.contacts__map'), {
     zoom: 17,
-    center: {lat: 59.938635, lng: 30.323118}
+    center: { lat: 59.938635, lng: 30.323118 }
   });
 
   var image = 'img/icon-map-marker.svg';
   var marker = new google.maps.Marker({
-    position: {lat: 59.938635, lng: 30.323118},
+    position: { lat: 59.938635, lng: 30.323118 },
     map: myMap,
     icon: image
   });
 }
+
+buttonSubmit.addEventListener('click', function (evt) {
+  evt.preventDefault();
+
+  var validityPhone = inputPhone.validity;
+  var validityEmail = inputEmail.validity;
+  if (validityPhone.patternMismatch || validityEmail.patternMismatch) {
+    modalError.classList.remove('modal--closed');
+  } else {
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', function () {
+      modalSuccess.classList.remove('modal--closed');
+    });
+    xhr.open(form.method, form.action);
+    xhr.send(formData);
+  }
+});
+
+buttonError.addEventListener('click', function () {
+  modalError.classList.add('modal--closed');
+});
+
+buttonSuccess.addEventListener('click', function () {
+  modalSuccess.classList.add('modal--closed');
+});
