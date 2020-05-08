@@ -1,3 +1,7 @@
+.slider__button {
+  .visually-hidden();
+}
+
 .slider__toggles {
   display: flex;
   justify-content: space-between;
@@ -39,6 +43,37 @@
 }
 
 @media (min-width: @desktop-width) {
+  .slider__list {
+    position: relative;
+  }
+
+  .slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+
+    display: block;
+    width: 22px;
+    height: 42px;
+
+    margin: 0;
+
+    background-color: transparent;
+    clip-path: none;
+    clip: auto;
+    cursor: pointer;
+
+    &--prev {
+      left: 0;
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &--next {
+      right: 0;
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
+  }
+
   .slider__toggles {
     .visually-hidden();
   }
