@@ -5,12 +5,16 @@
   .text();
 }
 
+.copyright__icon {
+  fill: @add-color;
+}
+
 .copyright__link {
   width: 27px;
   height: 35px;
 
-  &:hover path,
-  &:focus path {
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
     fill: @base-color;
   }
 

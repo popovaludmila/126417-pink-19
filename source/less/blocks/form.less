@@ -111,6 +111,7 @@
   line-height: 30px;
   font-weight: 400;
   border: 2px solid #e5e5e5;
+  background-color: @base-light-color;
   outline: none;
 
   &:hover {
@@ -119,6 +120,10 @@
 
   &:focus {
     border: 2px solid @add-color;
+  }
+
+  &--required {
+    background-color: rgb(241, 202, 202);
   }
 }
 
@@ -394,11 +399,12 @@
   .form__btn {
     position: absolute;
     z-index: 1;
-    right: 0;
+    right: 2px;
+    top: 2px;
 
     display: block;
     width: 60px;
-    height: 60px;
+    height: 56px;
     margin: 0;
 
     background-color: #e5e5e5;

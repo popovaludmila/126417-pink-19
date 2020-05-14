@@ -86,28 +86,37 @@
     width: 32px;
     height: 32px;
   }
+}
 
-  & path,
-  & rect {
-    opacity: 0.3;
+.edit__img {
+  opacity: 0.3;
+
+  &--crop {
+    width: 100%;
+    height: 100%;
   }
 
-  &:hover .fill,
-  &:focus .fill,
+  &--fill {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--contrast {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--current,
+  &:active {
+    opacity: 1;
+    fill: @add-color;
+  }
+
+  &:hover,
+  &:focus,
   &:hover rect,
   &:focus rect {
     opacity: 1;
-  }
-
-  &:active .fill,
-  &:active rect {
-    opacity: 1;
-    fill: @add-color;
-  }
-
-  &--current .fill {
-    opacity: 1;
-    fill: @add-color;
   }
 }
 

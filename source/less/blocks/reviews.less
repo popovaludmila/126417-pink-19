@@ -97,35 +97,8 @@
   }
 
   .reviews__list {
-    position: relative;
-
     padding-left: 120px;
     padding-right: 120px;
-
-    &::before,
-    &::after {
-      position: absolute;
-      z-index: 2;
-
-      display: block;
-      width: 22px;
-      height: 42px;
-
-      top: 50%;
-      transform: translateY(-100%);
-    }
-
-    &::before {
-      left: 0;
-
-      content: url("../img/icon-review-arrow-left.svg");
-    }
-
-    &::after {
-      right: 0;
-
-      content: url("../img/icon-review-arrow-right.svg");
-    }
   }
 
   .reviews__text {
