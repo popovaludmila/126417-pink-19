@@ -79,13 +79,13 @@
   line-height: 30px;
   color: @add-color;
 
-  &:hover,
-  &:focus {
+  &:not(&--address)&:hover,
+  &:not(&--address):focus {
     color: @base-color;
     text-decoration: underline;
   }
 
-  &:active {
+  &:not(&--address):active {
     text-decoration: none;
     opacity: 0.3;
   }

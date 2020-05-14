@@ -3,13 +3,12 @@ var navMain = document.querySelector('.main-nav'),
   headerInner = document.querySelector('.page-header__inner'),
   modalError = document.querySelector('.modal--error'),
   modalSuccess = document.querySelector('.modal--success'),
-  formInput = document.querySelectorAll('.form__input'),
-  buttonSubmit = document.querySelector('.form__button'),
+  form = document.querySelector('.form'),
+  buttonSubmit = document.getElementById('button-submit'),
   buttonError = document.getElementById('button-error'),
   buttonSuccess = document.getElementById('button-success'),
   inputPhone = document.getElementById('phone'),
-  inputEmail = document.getElementById('email'),
-  form = document.querySelector('.form');
+  inputEmail = document.getElementById('email');
 
 navMain.classList.remove('main-nav--nojs');
 headerInner.classList.remove('page-header__inner--opened');
