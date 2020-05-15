@@ -3,7 +3,8 @@ var navMain = document.querySelector('.main-nav'),
   headerInner = document.querySelector('.page-header__inner'),
   modalError = document.querySelector('.modal--error'),
   modalSuccess = document.querySelector('.modal--success'),
-  form = document.querySelector('.form'),
+  form = document.getElementById('form'),
+  formInputs = form.querySelectorAll('.form__input'),
   buttonSubmit = document.getElementById('button-submit'),
   buttonError = document.getElementById('button-error'),
   buttonSuccess = document.getElementById('button-success'),
@@ -41,21 +42,30 @@ function initMap() {
   });
 }
 
+formInputs.forEach(element => {
+  element.addEventListener('change', function () {
+    if (element.checkValidity()) {
+      element.classList.remove('form__input--error');
+    }
+  })
+});
+
 buttonSubmit.addEventListener('click', function (evt) {
   evt.preventDefault();
 
-  var validityPhone = inputPhone.validity;
-  var validityEmail = inputEmail.validity;
-  if (validityPhone.patternMismatch || validityEmail.patternMismatch) {
-    modalError.classList.remove('modal--closed');
+  let isValidForm = true;
+
+  formInputs.forEach(element => {
+    if (element.checkValidity() == false) {
+      element.classList.add('form__input--error');
+      isValidForm = false;
+    }
+  });
+
+  if (isValidForm) {
+    senVarificationData();
   } else {
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', function () {
-      modalSuccess.classList.remove('modal--closed');
-    });
-    xhr.open(form.method, form.action);
-    xhr.send(formData);
+    modalError.classList.remove('modal--closed');
   }
 });
 
@@ -66,3 +76,13 @@ buttonError.addEventListener('click', function () {
 buttonSuccess.addEventListener('click', function () {
   modalSuccess.classList.add('modal--closed');
 });
+
+function senVarificationData () {
+  var formData = new FormData(form);
+  var xhr = new XMLHttpRequest();
+  xhr.addEventListener('load', function () {
+    modalSuccess.classList.remove('modal--closed');
+  });
+  xhr.open(form.method, form.action);
+  xhr.send(formData);
+};
