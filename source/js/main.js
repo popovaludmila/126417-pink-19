@@ -4,7 +4,7 @@ var navMain = document.querySelector('.main-nav'),
   modalError = document.querySelector('.modal--error'),
   modalSuccess = document.querySelector('.modal--success'),
   form = document.getElementById('form'),
-  formInputs = form.querySelectorAll('.form__input'),
+  formInputs = document.querySelectorAll('.form__input'),
   buttonSubmit = document.getElementById('button-submit'),
   buttonError = document.getElementById('button-error'),
   buttonSuccess = document.getElementById('button-success'),
@@ -42,6 +42,12 @@ function initMap() {
   });
 }
 
+function existElement(el) {
+  if (el !== null) {
+    return el;
+  }
+}
+
 formInputs.forEach(element => {
   element.addEventListener('change', function () {
     if (element.checkValidity()) {
@@ -50,34 +56,40 @@ formInputs.forEach(element => {
   })
 });
 
-buttonSubmit.addEventListener('click', function (evt) {
-  evt.preventDefault();
+if (existElement(buttonSubmit)) {
+  buttonSubmit.addEventListener('click', function (evt) {
+    evt.preventDefault();
 
-  let isValidForm = true;
+    let isValidForm = true;
 
-  formInputs.forEach(element => {
-    if (element.checkValidity() == false) {
-      element.classList.add('form__input--error');
-      isValidForm = false;
+    formInputs.forEach(element => {
+      if (element.checkValidity() == false) {
+        element.classList.add('form__input--error');
+        isValidForm = false;
+      }
+    });
+
+    if (isValidForm) {
+      senVarificationData();
+    } else {
+      modalError.classList.remove('modal--closed');
     }
   });
+}
 
-  if (isValidForm) {
-    senVarificationData();
-  } else {
-    modalError.classList.remove('modal--closed');
-  }
-});
+if (existElement(buttonError)) {
+  buttonError.addEventListener('click', function () {
+    modalError.classList.add('modal--closed');
+  });
+}
 
-buttonError.addEventListener('click', function () {
-  modalError.classList.add('modal--closed');
-});
+if (existElement(buttonSuccess)) {
+  buttonSuccess.addEventListener('click', function () {
+    modalSuccess.classList.add('modal--closed');
+  });
+}
 
-buttonSuccess.addEventListener('click', function () {
-  modalSuccess.classList.add('modal--closed');
-});
-
-function senVarificationData () {
+function senVarificationData() {
   var formData = new FormData(form);
   var xhr = new XMLHttpRequest();
   xhr.addEventListener('load', function () {
