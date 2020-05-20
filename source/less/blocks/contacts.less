@@ -7,12 +7,23 @@
   top: 0;
   min-height: 245px;
 
-  background-image: url("../img/bg-map-mobile@1x.png");
   background-position: 100% 100%;
   background-size: cover;
+}
+
+.no-webp .contacts__map {
+  background-image: url("../img/bg-map-mobile@1x.png");
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+}
+
+.webp .contacts__map {
+  background-image: url("../img/bg-map-mobile@1x.webp");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.webp");
   }
 }
 
@@ -130,11 +141,21 @@
 
   .contacts__map {
     min-height: 525px;
+  }
 
+  .no-webp .contacts__map {
     background-image: url("../img/bg-map-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  }
+
+  .webp .contacts__map {
+    background-image: url("../img/bg-map-tablet@1x.webp");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.webp");
     }
   }
 
@@ -188,11 +209,21 @@
 
   .contacts__map {
     min-height: 725px;
+  }
 
+  .no-webp .contacts__map {
     background-image: url("../img/bg-map-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  }
+
+  .webp .contacts__map {
+    background-image: url("../img/bg-map-desktop@1x.webp");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.webp");
     }
   }
 

@@ -53,7 +53,7 @@
                 <a class="site-list__link" href="index.html">Главная</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link--current" href="photo.html">Фотографии</a>
+                <a class="site-list__link site-list__link--current" href="photo.html">Фотографии</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link" href="form.html">Конкурс</a>
@@ -72,7 +72,6 @@
   </header>
 
   <main class="page-main">
-
     <section class="photos">
       <div class="container">
         <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
@@ -299,8 +298,7 @@
                     srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 660px)"
                     srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
-                  <source type="image/webp"
-                    srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
 
                   <source media="(min-width: 960px)"
                     srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
@@ -341,6 +339,12 @@
         <div class="upload__inner">
           <h2 class="visually-hidden">Загрузка фотографии со своего устройства</h2>
           <picture>
+            <source type="image/webp" media="(min-width: 960px)"
+              srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)"
+              srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+
             <source media="(min-width: 960px)"
               srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)"
