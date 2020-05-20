@@ -10,6 +10,7 @@
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-jsmin": "^0.1.5",
     "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
@@ -50,6 +51,7 @@
     "del": "^5.1.0",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^5.1.0",
+    "modernizr": "^3.11.2",
     "normalize": "^0.3.1"
   }
 }
