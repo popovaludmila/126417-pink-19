@@ -32,6 +32,10 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
 
 gulp.task("server", function () {
   server.init({
@@ -108,5 +112,5 @@ gulp.task("js", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("build", gulp.series("css", "js", "sprite", "html"));
+
 gulp.task("start", gulp.series("build", "server"));
