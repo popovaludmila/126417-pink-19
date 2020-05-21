@@ -24,8 +24,8 @@
 
       display: block;
       padding: 6px 20px;
-      top: 54px;
-      right: 130px;
+      top: 0;
+      right: 20px;
 
       content: "Панорама дня";
       font-size: 12px;
@@ -226,6 +226,15 @@
 
     &--panorama {
       height: 506px;
+    }
+  }
+
+  .content__photo {
+    &--panorama {
+      &::before {
+        top: 54px;
+        right: 10px;
+      }
     }
   }
 
