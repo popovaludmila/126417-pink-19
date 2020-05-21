@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <style>
     HTML {
@@ -32,12 +32,12 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--main">
     <div class="page-header__wrapper">
       <div class="page-header__inner page-header__inner--opened">
         <a class="page-header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
             <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
             <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
               alt="Логотип Пинк">
@@ -50,7 +50,7 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a class="site-list__link--current">Главная</a>
+                <a class="site-list__link site-list__link--current">Главная</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link" href="photo.html">Фотографии</a>
@@ -80,19 +80,19 @@
               <li class="download__item">
                 <a class="download__link download__link--ios" href="https://www.apple.com/ru/ios/app-store"
                   aria-label="Скачать для iOS">
-                  <img class="download__icon" src="img/logo-apple.svg">
+                  <img class="download__icon" src="img/logo-apple.svg" alt="">
                 </a>
               </li>
               <li class="download__item">
                 <a class="download__link download__link--android" href="https://play.google.com/store"
                   aria-label="Скачать для Android">
-                  <img class="download__icon" src="img/logo-android.svg">
+                  <img class="download__icon" src="img/logo-android.svg" alt="">
                 </a>
               </li>
               <li class="download__item">
                 <a class="download__link download__link--windows"
                   href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Скачать для Windows">
-                  <img class="download__icon" src="img/logo-microsoft.svg">
+                  <img class="download__icon" src="img/logo-microsoft.svg" alt="">
                 </a>
               </li>
             </ul>
@@ -100,8 +100,7 @@
           </div>
         </div>
       </div>
-      </section>
-
+    </div>
   </header>
 
   <main class="page-main">
@@ -166,7 +165,7 @@
             <button class="slider__button slider__button--prev" type="button"></button>
             <button class="slider__button slider__button--next" type="button"></button>
           </div>
-        <p class="reviews__toggles slider__toggles">
+          <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle slider__toggle--current" type="button"></button>
             <button class="slider__toggle" type="button"></button>
             <button class="slider__toggle" type="button"></button>
@@ -249,10 +248,10 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" aria-label="Логотип Пинк">
           <svg class="page-footer__logo-mobile" width="147" height="41">
-            <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            <use xlink:href="img/sprite.svg#mobile-logo"></use>
           </svg>
           <svg class="page-footer__logo-desktop" width="147" height="41">
-            <use xlink:href="img/sprite.svg#logo-desktop"></use>
+            <use xlink:href="img/sprite.svg#desktop-logo"></use>
           </svg>
         </a>
         <div class="page-footer__social page-footer__social--main social">
@@ -291,8 +290,9 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaeBBAQdlJgBEC9bAkAh4Bz9Wpd4FDm5k&callback=initMap"></script>
+  <script src="js/main.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaeBBAQdlJgBEC9bAkAh4Bz9Wpd4FDm5k&callback=initMap"></script>
 </body>
 
 </html>
