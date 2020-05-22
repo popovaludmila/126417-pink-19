@@ -30,7 +30,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
