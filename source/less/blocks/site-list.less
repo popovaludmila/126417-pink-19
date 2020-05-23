@@ -24,12 +24,12 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid @base-dark-color;
 
-  &:hover .site-list__link,
-  &:focus .site-list__link {
+  &:hover .site-list__link:not(.site-list__link--current),
+  &:focus .site-list__link:not(.site-list__link--current) {
     color: @add-color;
   }
 
-  &:active .site-list__link {
+  &:active .site-list__link:not(.site-list__link--current) {
     color: @base-light-color;
 
     opacity: 0.3;
