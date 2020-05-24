@@ -9,10 +9,9 @@
 
     &--current {
       padding-bottom: 6px;
-
+      border-bottom: 2px solid @base-light-color;
       color: @base-light-color;
 
-      border-bottom: 2px solid @base-light-color;
     }
   }
 }
@@ -30,8 +29,7 @@
   }
 
   &:active .site-list__link:not(.site-list__link--current) {
-    color: @base-light-color;
-
+    color: @add-color;
     opacity: 0.3;
   }
 }
@@ -53,5 +51,11 @@
 
     border-bottom: none;
     border-top: none;
+
+    &:active .site-list__link:not(.site-list__link--current) {
+      color: @base-light-color;
+
+      opacity: 0.3;
+    }
   }
 }

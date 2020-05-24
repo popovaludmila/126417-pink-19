@@ -103,4 +103,4 @@
         return svg;
     }
     return svg4everybody;
-})();
+});
