@@ -6,6 +6,7 @@
 
 .social__icon {
   fill: @add-color;
+  pointer-events: none;
 }
 
 .social__item {
@@ -35,6 +36,14 @@
   &:active .social__icon {
     opacity: 0.3;
   }
+}
+
+.social__icon:active {
+  opacity: 0.3;
+}
+
+.social__item:active {
+  border: 3px solid #e5e5e5;
 }
 
 .social__link {

@@ -7,6 +7,7 @@
 
 .copyright__icon {
   fill: @add-color;
+  pointer-events: none;
 }
 
 .copyright__link {
@@ -21,6 +22,11 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.copyright__link:active .copyright__icon path {
+  fill: @base-color;
+  opacity: 0.3;
 }
 
 @media (min-width: @desktop-width) {
