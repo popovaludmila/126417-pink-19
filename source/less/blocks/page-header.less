@@ -76,9 +76,18 @@
   }
 }
 
+.page-header__logo-icon:active {
+  opacity: 0.3;
+}
+
+.page-header__logo-icon:active path {
+  fill: @base-light-color;
+}
+
 .page-header__logo-icon {
   width: 75px;
   height: 22px;
+  pointer-events: none;
 }
 
 .page-header__intro {

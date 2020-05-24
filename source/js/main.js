@@ -1,3 +1,4 @@
+
 var navMain = document.querySelector('.main-nav'),
   navToggle = document.querySelector('.main-nav__toggle'),
   headerInner = document.querySelector('.page-header__inner'),
@@ -48,13 +49,15 @@ function existElement(el) {
   }
 }
 
-formInputs.forEach(element => {
-  element.addEventListener('change', function () {
-    if (element.checkValidity()) {
-      element.classList.remove('form__input--error');
-    }
-  })
-});
+formInputs.forEach(
+  function (element) {
+    element.addEventListener('change', function (e) {
+      if (e.checkValidity()) {
+        e.classList.remove('form__input--error');
+      }
+    })
+  }
+);
 
 if (existElement(buttonSubmit)) {
   buttonSubmit.addEventListener('click', function (evt) {
@@ -62,12 +65,14 @@ if (existElement(buttonSubmit)) {
 
     let isValidForm = true;
 
-    formInputs.forEach(element => {
-      if (element.checkValidity() == false) {
-        element.classList.add('form__input--error');
-        isValidForm = false;
+    formInputs.forEach(
+      function (element) {
+        if (element.checkValidity() == false) {
+          element.classList.add('form__input--error');
+          isValidForm = false;
+        }
       }
-    });
+    );
 
     if (isValidForm) {
       senVarificationData();

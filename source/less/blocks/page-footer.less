@@ -15,7 +15,15 @@
   padding-bottom: 40px;
 }
 
-.page-footer__logo {
+.page-footer__logo-icon:active {
+  opacity: 0.3;
+}
+
+.page-footer__logo:active .page-footer__logo-pink path {
+  fill: @base-color;
+}
+
+.page-footer__logo-icon {
   display: block;
 
   &:hover .page-footer__logo-pink,
@@ -35,10 +43,12 @@
 .page-footer__logo-pink {
   display: block;
   fill: @base-color;
+  pointer-events: none;
 }
 
 .page-footer__logo-glasses {
   fill: @add-color;
+  pointer-events: none;
 
   &--mobile {
     display: block;
