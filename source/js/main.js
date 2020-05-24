@@ -49,6 +49,8 @@ function existElement(el) {
   }
 }
 
+formInputs = Array.prototype.slice.call(formInputs);
+
 formInputs.forEach(
   function (element) {
     element.addEventListener('change', function (e) {
