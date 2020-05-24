@@ -1,5 +1,3 @@
-import "../../node_modules/picturefill/dist/picturefill";
-
 var navMain = document.querySelector('.main-nav'),
   navToggle = document.querySelector('.main-nav__toggle'),
   headerInner = document.querySelector('.page-header__inner'),

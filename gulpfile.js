@@ -101,15 +101,19 @@ gulp.task("clean", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/main.js")
+  return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    .pipe(rename("main.min.js"))
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".js";
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("build", gulp.series(
   "clean",
   "copy",
+  "images",
   "css",
   "js",
   "sprite",

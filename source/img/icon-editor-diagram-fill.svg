@@ -1,23 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #d22856;
-        fill-opacity: 0;
-        stroke: #d22856;
-        stroke-linejoin: round;
-        stroke-width: 2px;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="1" y="1" width="14" height="14" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#f2f2f2"/>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-      <feBlend result="blend" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g style="fill: #d22856; filter: url(#filter)">
-    <circle id="slider_copy_2" data-name="slider copy 2" class="cls-1" cx="8" cy="8" r="7" style="stroke: inherit; filter: none; fill: inherit"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="253" height="253" viewBox="0 0 253 253">
+  <g>
+    <circle fill="none" cx="110" cy="110" r="126" stroke="#d22856" stroke-width="17"/>
   </g>
-  <use xlink:href="#slider_copy_2" style="stroke: #d22856; filter: none; fill: none"/>
 </svg>
