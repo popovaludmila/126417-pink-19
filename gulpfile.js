@@ -110,7 +110,6 @@ gulp.task("js", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "images",
   "css",
   "js",
   "sprite",
