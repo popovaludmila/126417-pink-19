@@ -1,3 +1,4 @@
+
 var navMain = document.querySelector('.main-nav'),
   navToggle = document.querySelector('.main-nav__toggle'),
   headerInner = document.querySelector('.page-header__inner'),
@@ -10,6 +11,8 @@ var navMain = document.querySelector('.main-nav'),
   buttonSuccess = document.getElementById('button-success'),
   inputPhone = document.getElementById('phone'),
   inputEmail = document.getElementById('email');
+
+var isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));
 
 navMain.classList.remove('main-nav--nojs');
 headerInner.classList.remove('page-header__inner--opened');
@@ -34,11 +37,10 @@ function initMap() {
     center: { lat: 59.938635, lng: 30.323118 }
   });
 
-  var image = 'img/icon-map-marker.svg';
   var marker = new google.maps.Marker({
     position: { lat: 59.938635, lng: 30.323118 },
     map: myMap,
-    icon: image
+    icon: isIE11 ? 'img/icon-map-marker.png' : 'img/icon-map-marker.svg'
   });
 }
 
@@ -48,13 +50,17 @@ function existElement(el) {
   }
 }
 
-formInputs.forEach(element => {
-  element.addEventListener('change', function () {
-    if (element.checkValidity()) {
-      element.classList.remove('form__input--error');
-    }
-  })
-});
+formInputs = Array.prototype.slice.call(formInputs);
+
+formInputs.forEach(
+  function (element) {
+    element.addEventListener('change', function (e) {
+      if (e.checkValidity()) {
+        e.classList.remove('form__input--error');
+      }
+    })
+  }
+);
 
 if (existElement(buttonSubmit)) {
   buttonSubmit.addEventListener('click', function (evt) {
@@ -62,12 +68,14 @@ if (existElement(buttonSubmit)) {
 
     let isValidForm = true;
 
-    formInputs.forEach(element => {
-      if (element.checkValidity() == false) {
-        element.classList.add('form__input--error');
-        isValidForm = false;
+    formInputs.forEach(
+      function (element) {
+        if (element.checkValidity() == false) {
+          element.classList.add('form__input--error');
+          isValidForm = false;
+        }
       }
-    });
+    );
 
     if (isValidForm) {
       senVarificationData();

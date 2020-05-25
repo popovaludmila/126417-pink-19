@@ -7,6 +7,7 @@
   &--panorama {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 21px;
     background-color: @base-light-color;
   }
 }
@@ -24,8 +25,8 @@
 
       display: block;
       padding: 6px 20px;
-      top: 54px;
-      right: 130px;
+      top: 0;
+      right: 20px;
 
       content: "Панорама дня";
       font-size: 12px;
@@ -68,7 +69,7 @@
 }
 
 .content__text {
-  padding-top: 21px;
+  padding-top: 20px;
   padding-bottom: 9px;
   padding-left: 17px;
   padding-right: 15px;
@@ -133,7 +134,7 @@
 @media (min-width: @tablet-width) {
   .content {
     min-height: 455px;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
 
     &--panorama {
       margin-bottom: 51px;
@@ -145,6 +146,14 @@
 
     &--panorama {
       height: 510px;
+    }
+  }
+
+  .content__photo {
+    &--panorama {
+      &::before {
+        top: 59px;
+      }
     }
   }
 
@@ -205,7 +214,7 @@
     padding-left: 0;
 
     &--panorama {
-      padding-right: 13px;
+      padding-right: 16px;
     }
   }
 }
@@ -226,6 +235,15 @@
 
     &--panorama {
       height: 506px;
+    }
+  }
+
+  .content__photo {
+    &--panorama {
+      &::before {
+        top: 54px;
+        right: 10px;
+      }
     }
   }
 

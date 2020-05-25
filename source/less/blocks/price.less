@@ -111,9 +111,10 @@
   position: relative;
 
   width: 280px;
+  height: 60px;
 
-  padding-top: 16px;
-  padding-bottom: 19px;
+  padding-top: 18px;
+  padding-bottom: 17px;
 
   border: 2px solid #e5e5e5;
   border-collapse: collapse;
@@ -125,7 +126,6 @@
   &--title {
     position: absolute;
     right: 0;
-
     .text();
     font-weight: 400;
     border: 0;
@@ -137,7 +137,7 @@
 
     display: block;
     right: 20px;
-    top: 50%;
+    top: 30px;
     transform: translateY(-50%);
   }
 
@@ -219,6 +219,7 @@
 
   .price__option {
     width: 155px;
+    height: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -233,12 +234,13 @@
 
       .text();
       font-weight: 400;
-      text-transform: initial;
+      text-transform: capitalize;
     }
 
     &::after {
       display: block;
       left: 50%;
+      top: 25px;
       transform: translate(-50%, -50%);
     }
   }

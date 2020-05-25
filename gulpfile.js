@@ -10,6 +10,7 @@ var autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var posthtml = require('gulp-posthtml');
+var htmlmin = require('gulp-htmlmin');
 
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
@@ -29,7 +30,8 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("refresh", function (done) {
@@ -48,13 +50,13 @@ gulp.task("server", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ progressive: true }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
@@ -68,7 +70,7 @@ gulp.task("sprite", function () {
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename("sprite-2.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 });
 
@@ -78,6 +80,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin())
     .pipe(gulp.dest("build"));
 });
 
@@ -85,7 +88,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    "source/js/**/*.min.js",
     "source/*.ico"
   ], {
     base: "source"
@@ -97,20 +100,24 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("js", function () {
+  return gulp.src(["source/js/*.js", "!source/js/*.min.js"])
+    .pipe(jsmin())
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".js";
+    }))
+    .pipe(gulp.dest("source/js"));
+});
+
 gulp.task("build", gulp.series(
   "clean",
+  "js",
   "copy",
+  "images",
   "css",
   "sprite",
   "html"
 ));
-
-gulp.task("js", function () {
-  return gulp.src("source/js/main.js")
-    .pipe(jsmin())
-    .pipe(rename("main.min.js"))
-    .pipe(gulp.dest("build/js"));
-});
-
 
 gulp.task("start", gulp.series("build", "server"));

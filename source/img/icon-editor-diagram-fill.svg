@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"><defs><filter id="a" x="1" y="1" width="14" height="14" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f2f2f2"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g fill="#d22856" filter="url(#a)"><circle id="b" data-name="slider copy 2" cx="8" cy="8" r="7" stroke="inherit" filter="none" fill="inherit" fill-opacity="0" stroke-linejoin="round" stroke-width="2"/></g><use xlink:href="#b" stroke="#d22856" filter="none" fill="none"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="253" height="253" viewBox="0 0 253 253">
+      <g>
+        <circle fill="none" cx="129" cy="165" r="10" stroke="#d22856" stroke-width="17"/>
+      </g>
+</svg>

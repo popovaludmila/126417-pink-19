@@ -81,7 +81,7 @@
 
 .form__legend {
   padding-bottom: 24px;
-
+  margin: 0 auto;
   .text();
   line-height: 18px;
   color: @add-color;
@@ -105,7 +105,10 @@
 .form__input {
   width: 100%;
   height: 60px;
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
 
   .subtitle();
   line-height: 30px;
@@ -288,9 +291,13 @@
 
     &--one {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
       border: 0;
+    }
+
+    &--three {
+      padding-top: 40px;
     }
   }
 
@@ -299,7 +306,7 @@
       flex-direction: row;
       align-items: center;
 
-      padding-bottom: 55px;
+      padding-bottom: 57px;
     }
 
     &--three {
@@ -325,7 +332,7 @@
     &--three {
       padding-top: 15px;
       padding-left: 20px;
-      padding-bottom: 32px;
+      padding-bottom: 30px;
       order: 2;
     }
   }
@@ -343,11 +350,8 @@
 
     &--contacts {
       position: relative;
-      display: inline-block;
       width: auto;
-      height: auto;
-      margin: 0;
-      margin-bottom: 40px;
+      margin: 0 auto;
       overflow: visible;
       clip-path: none;
     }
@@ -372,8 +376,9 @@
   }
 
   .form__textarea {
+    min-height: 190px;
     margin-top: 35px;
-    margin-bottom: 45px;
+    margin-bottom: 55px;
   }
 
   .form__container {
@@ -436,7 +441,7 @@
     max-width: 960px;
     margin: 0 auto;
     padding-top: 92px;
-    padding-bottom: 35px;
+    padding-bottom: 33px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -461,12 +466,17 @@
       max-width: 960px;
       padding-bottom: 55px;
     }
+
+    &--two {
+      padding-bottom: 58px;
+    }
   }
 
   .form__fieldset {
     width: 100%;
 
     &--one {
+      flex-direction: column;
       padding-left: 0;
       padding-right: 0;
       padding-top: 18px;
@@ -518,7 +528,7 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
-    padding-top: 12px;
+    padding-top: 7px;
   }
 
   .form__input {
@@ -539,6 +549,8 @@
 
   .form__textarea {
     min-height: 130px;
+    padding: 15px 16px;
+    margin-bottom: 43px;
   }
 
   .form__fieldset-container {

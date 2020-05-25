@@ -49,9 +49,13 @@
   },
   "dependencies": {
     "del": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^5.1.0",
     "modernizr": "^3.11.2",
-    "normalize": "^0.3.1"
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1",
+    "picturefill": "^3.0.3",
+    "svg4everybody": "^2.1.9"
   }
 }

@@ -4,14 +4,13 @@
   border-top: 1px solid @base-dark-color;
 
   &__link {
+    font-family: inherit;
     color: @base-light-color;
 
     &--current {
-      padding-bottom: 9px;
-
-      color: @base-light-color;
-
+      padding-bottom: 6px;
       border-bottom: 2px solid @base-light-color;
+      color: @base-light-color;
     }
   }
 }
@@ -23,14 +22,13 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid @base-dark-color;
 
-  &:hover .site-list__link,
-  &:focus .site-list__link {
+  &:hover .site-list__link:not(.site-list__link--current),
+  &:focus .site-list__link:not(.site-list__link--current) {
     color: @add-color;
   }
 
-  &:active .site-list__link {
-    color: @base-light-color;
-
+  &:active .site-list__link:not(.site-list__link--current) {
+    color: @add-color;
     opacity: 0.3;
   }
 }
@@ -52,5 +50,11 @@
 
     border-bottom: none;
     border-top: none;
+
+    &:active .site-list__link:not(.site-list__link--current) {
+      color: @base-light-color;
+
+      opacity: 0.3;
+    }
   }
 }

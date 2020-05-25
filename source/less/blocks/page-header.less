@@ -1,12 +1,15 @@
 .page-header {
   position: relative;
+  min-height: 239px;
+
+  overflow: hidden;
 
   &::before {
     position: absolute;
     content: "";
     display: block;
-    height: 100%;
-    max-height: 239px;
+
+    min-height: 239px;
 
     left: 0;
     right: 0;
@@ -23,9 +26,13 @@
   }
 
   &--main {
+    min-height: 734px;
+
     &::before {
-      max-height: 734px;
-      background-position: center -45px;
+      bottom: 264px;
+
+      min-height: 470px;
+      background-position: center;
     }
   }
 }
@@ -36,7 +43,6 @@
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0.99;
 }
-
 
 .page-header__inner {
   width: 100%;
@@ -56,18 +62,37 @@
   width: 75px;
 
   padding-top: 22px;
-  padding-bottom: 18px;
+  padding-bottom: 25px;
   margin-left: 20px;
+
+  &:hover path,
+  &:focus path {
+    fill: @add-color;
+  }
+
+  &:active path {
+    fill: @base-light-color;
+    opacity: 0.3;
+  }
 }
 
-.page-header__logo-image {
+.page-header__logo-icon:active {
+  opacity: 0.3;
+}
+
+.page-header__logo-icon:active path {
+  fill: @base-light-color;
+}
+
+.page-header__logo-icon {
   width: 75px;
   height: 22px;
+  pointer-events: none;
 }
 
 .page-header__intro {
+  position: relative;
   z-index: 2;
-  opacity: 0.99;
 }
 
 .page-header__title {
@@ -90,9 +115,35 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    min-height: 436px;
+
     &::before {
-      max-height: 438px;
-      background-position: center top;
+      display: none;
+    }
+
+    &--main {
+      &::before {
+        top: 0;
+        min-height: 729px;
+      }
+    }
+  }
+
+  .page-header__inner {
+    position: relative;
+    z-index: auto;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      min-height: 729px;
+      background-position: center;
       background-image: url("../img/bg-back-tablet@1x.jpg");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -100,10 +151,14 @@
       }
     }
 
-    &--main {
+    &--opened {
       &::before {
-        max-height: 734px;
+        top: calc(100% - 110px);
       }
+    }
+
+    &--closed {
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -111,10 +166,10 @@
     width: 147px;
 
     padding-top: 28px;
-    padding-bottom: 35px;
+    padding-bottom: 40px;
   }
 
-  .page-header__logo-image {
+  .page-header__logo-icon {
     width: 147px;
     height: 40px;
   }
@@ -135,9 +190,15 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    position: relative;
+    min-height: 394px;
+
     &::before {
-      max-height: 395px;
-      background-position: center top;
+      display: block;
+      top: 0;
+      min-height: 853px;
+
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url("../img/bg-back-desktop@1x.jpg");
@@ -149,7 +210,7 @@
 
     &--main {
       &::before {
-        max-height: 854px;
+        min-height: 853px;
       }
     }
   }
@@ -162,12 +223,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     .desktop-wrapper();
-    padding-top: 28px;
-    padding-bottom: 35px;
+    padding-top: 25px;
+    padding-bottom: 45px;
     background-color: transparent;
+
+    &::before {
+      display: none;
+    }
+
+    &--opened {
+      &::before {
+        display: none;
+      }
+    }
   }
 
   .page-header__logo {
