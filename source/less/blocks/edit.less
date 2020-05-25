@@ -3,6 +3,7 @@
 }
 
 .edit__list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,18 +16,14 @@
   padding-right: 16px;
 }
 
-.edit__item {
-  position: relative;
-}
-
 .edit__range {
   position: absolute;
   display: block;
   width: 240px;
 
   left: -15px;
-  bottom: -30px;
-  margin: 0 auto;
+  bottom: 0;
+  margin-bottom: 35px;
 
   outline: none;
   appearance: none;
@@ -73,7 +70,7 @@
 
   box-sizing: border-box;
   cursor: pointer;
-  overflow: visible;
+  appearance: none;
 
   &:active {
     background-color: @add-color;
