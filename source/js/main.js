@@ -12,6 +12,8 @@ var navMain = document.querySelector('.main-nav'),
   inputPhone = document.getElementById('phone'),
   inputEmail = document.getElementById('email');
 
+var isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));
+
 navMain.classList.remove('main-nav--nojs');
 headerInner.classList.remove('page-header__inner--opened');
 
@@ -35,11 +37,10 @@ function initMap() {
     center: { lat: 59.938635, lng: 30.323118 }
   });
 
-  var image = 'img/icon-map-marker.svg';
   var marker = new google.maps.Marker({
     position: { lat: 59.938635, lng: 30.323118 },
     map: myMap,
-    icon: image
+    icon: isIE11 ? 'img/icon-map-marker.png' : 'img/icon-map-marker.svg'
   });
 }
 

@@ -11,59 +11,57 @@
   .list();
   margin: 0 auto;
   margin-top: 32px;
-  padding-bottom: 30px;
+  padding-bottom: 65px;
   padding-right: 16px;
 }
 
-.edit__input {
-  width: 240px;
-  height: 2px;
-
-  margin: 0 auto;
-  margin-bottom: 35px;
+.edit__item {
+  position: relative;
 }
 
 .edit__range {
-  display: none;
+  position: absolute;
+  display: block;
+  width: 240px;
 
-  &--common {
-    position: relative;
-    display: block;
-    width: 240px;
+  left: -15px;
+  bottom: -30px;
+  margin: 0 auto;
 
-    margin: 0;
-    margin-right: 18px;
+  outline: none;
+  appearance: none;
 
-    outline: none;
+  &--contrast,
+  &--fill {
+    display: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background-color: @base-color;
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: -6px;
+
+    border: 2px solid @add-color;
+    border-radius: 50%;
+    background-color: @base-light-color;
+    cursor: pointer;
     appearance: none;
 
-    &::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 2px;
-      background-color: @base-color;
-      border: 0;
-    }
-
-    &::-webkit-slider-thumb {
-      width: 14px;
-      height: 14px;
-      margin-top: -6px;
-
-      border: 2px solid @add-color;
-      border-radius: 50%;
-      background-color: @base-light-color;
-      cursor: pointer;
-      appearance: none;
-
-      &:active {
-        background-color: @add-color;
-        outline: none;
-      }
+    &:active {
+      background-color: @add-color;
+      outline: none;
     }
   }
 }
 
-.edit__range--common::-ms-thumb {
+.edit__range:-ms-thumb {
   display: block;
   width: 14px;
   height: 14px;
@@ -83,27 +81,26 @@
   }
 }
 
-.edit__range--common::-ms-track {
+.edit__range::-ms-track {
   width: 100%;
   height: 2px;
 
   border-width: 7px 0;
-  background-color: @base-color;
+  background-color: transparent;
   border-color: transparent;
   color: transparent;
   cursor: pointer;
-  box-sizing: border-box;
 }
 
-.edit__range--common::-ms-fill-lower {
-  background-color: @base-color;
+.edit__range::-ms-fill-lower {
+  background-color: #000000;
 }
 
-.edit__range--common::-ms-fill-upper {
-  background-color: @base-color;
+.edit__rang::-ms-fill-upper {
+  background-color: #000000;
 }
 
-.edit__range--common::-moz-range-track {
+.edit__range::-moz-range-track {
   width: 100%;
   height: 2px;
 
@@ -114,7 +111,7 @@
   box-sizing: border-box;
 }
 
-.edit__range--common::-moz-range-thumb {
+.edit__range::-moz-range-thumb {
   width: 14px;
   height: 14px;
   margin-top: 0;
@@ -128,7 +125,7 @@
   appearance: none;
 }
 
-.edit__range--common:-moz-focusring {
+.edit__range:-moz-focusring {
   outline: 1px solid white;
   outline-offset: -1px;
 }
@@ -290,115 +287,19 @@
     }
   }
 
-  .edit__input {
-    .visually-hidden();
-  }
-
   .edit__range {
     position: relative;
-    display: block;
     width: 202px;
 
+    left: 0;
+    bottom: 0;
     margin: 0;
     margin-right: 18px;
 
-    outline: none;
-    appearance: none;
-
-    &::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 2px;
-      background-color: @base-color;
-      border: 0;
+    &--fill,
+    &--contrast {
+      display: block;
     }
-
-    &::-webkit-slider-thumb {
-      width: 14px;
-      height: 14px;
-      margin-top: -6px;
-
-      border: 2px solid @add-color;
-      border-radius: 50%;
-      background-color: @base-light-color;
-      cursor: pointer;
-      appearance: none;
-
-      &:active {
-        background-color: @add-color;
-      }
-    }
-  }
-
-  .edit__range::-ms-thumb {
-    display: block;
-    width: 14px;
-    height: 14px;
-    margin-top: 0;
-
-    background-color: @base-light-color;
-    border: 2px solid @add-color;
-    border-radius: 50%;
-
-    box-sizing: border-box;
-    cursor: pointer;
-    appearance: none;
-
-    &:active {
-      background-color: @add-color;
-      outline: none;
-    }
-  }
-
-  .edit__range::-ms-track {
-    width: 202px;
-    height: 2px;
-
-    border-width: 7px 0;
-    background-color: transparent;
-    border-color: transparent;
-    color: transparent;
-    cursor: pointer;
-    box-sizing: border-box;
-    appearance: none;
-  }
-
-  .edit__range::-ms-fill-lower {
-    background-color: @base-color;
-  }
-
-  .edit__range::-ms-fill-upper {
-    background-color: @base-color;
-  }
-
-  .edit__range::-moz-range-track {
-    width: 202px;
-    height: 2px;
-
-    background-color: transparent;
-    border-color: transparent;
-    color: transparent;
-    cursor: pointer;
-    box-sizing: border-box;
-    appearance: none;
-  }
-
-  .edit__range::-moz-range-thumb {
-    width: 14px;
-    height: 14px;
-    margin-top: 0;
-
-    background-color: @base-light-color;
-    border: 2px solid @add-color;
-    border-radius: 50%;
-
-    box-sizing: border-box;
-    cursor: pointer;
-    appearance: none;
-  }
-
-  .edit__range:-moz-focusring {
-    outline: 1px solid white;
-    outline-offset: -1px;
   }
 
   .edit__icon {
