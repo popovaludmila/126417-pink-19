@@ -24,7 +24,7 @@
 }
 
 .edit__range {
-  .visually-hidden();
+  display: none;
 
   &--common {
     position: relative;
@@ -34,10 +34,8 @@
     margin: 0;
     margin-right: 18px;
 
-    overflow: visible;
     outline: none;
     appearance: none;
-    clip-path: none;
 
     &::-webkit-slider-runnable-track {
       width: 100%;
@@ -77,6 +75,7 @@
 
   box-sizing: border-box;
   cursor: pointer;
+  overflow: visible;
 
   &:active {
     background-color: @add-color;
@@ -85,11 +84,11 @@
 }
 
 .edit__range--common::-ms-track {
-  width: 240px;
+  width: 100%;
   height: 2px;
 
   border-width: 7px 0;
-  background-color: transparent;
+  background-color: @base-color;
   border-color: transparent;
   color: transparent;
   cursor: pointer;
@@ -102,6 +101,36 @@
 
 .edit__range--common::-ms-fill-upper {
   background-color: @base-color;
+}
+
+.edit__range--common::-moz-range-track {
+  width: 100%;
+  height: 2px;
+
+  background-color: transparent;
+  border-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.edit__range--common::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  margin-top: 0;
+
+  background-color: @base-light-color;
+  border: 2px solid @add-color;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+}
+
+.edit__range--common:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
 }
 
 .edit__icon {
@@ -238,6 +267,7 @@
 
   .edit__item {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -272,10 +302,8 @@
     margin: 0;
     margin-right: 18px;
 
-    overflow: visible;
     outline: none;
     appearance: none;
-    clip-path: none;
 
     &::-webkit-slider-runnable-track {
       width: 100%;
@@ -313,6 +341,7 @@
 
     box-sizing: border-box;
     cursor: pointer;
+    appearance: none;
 
     &:active {
       background-color: @add-color;
@@ -321,7 +350,7 @@
   }
 
   .edit__range::-ms-track {
-    width: 100%;
+    width: 202px;
     height: 2px;
 
     border-width: 7px 0;
@@ -329,6 +358,8 @@
     border-color: transparent;
     color: transparent;
     cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
   }
 
   .edit__range::-ms-fill-lower {
@@ -337,6 +368,37 @@
 
   .edit__range::-ms-fill-upper {
     background-color: @base-color;
+  }
+
+  .edit__range::-moz-range-track {
+    width: 202px;
+    height: 2px;
+
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
+  }
+
+  .edit__range::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: 0;
+
+    background-color: @base-light-color;
+    border: 2px solid @add-color;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  .edit__range:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
   }
 
   .edit__icon {
