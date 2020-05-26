@@ -135,9 +135,15 @@
   .content {
     min-height: 455px;
     margin-bottom: 20px;
+    margin-right: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
 
     &--panorama {
       margin-bottom: 51px;
+      margin-right: 0;
     }
   }
 
@@ -224,6 +230,14 @@
     min-height: 555px;
 
     margin-bottom: 55px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     &--panorama {
       margin-bottom: 51px;
