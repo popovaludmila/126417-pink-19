@@ -65,12 +65,12 @@
   padding-bottom: 25px;
   margin-left: 20px;
 
-  &:hover path,
-  &:focus path {
+  &:not(.page-header__logo--main):hover path,
+  &:not(.page-header__logo--main):focus path {
     fill: @add-color;
   }
 
-  &:active path {
+  &:not(.page-header__logo--main):active path {
     fill: @base-light-color;
     opacity: 0.3;
   }
