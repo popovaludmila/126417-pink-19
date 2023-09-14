@@ -6,6 +6,6 @@ https://popovaludmila.github.io/126417-pink-19/
 
 
 Технологический стек:
-HTML
-Less
-Gulp
+  HTML,
+  Less,
+  Gulp
