@@ -1,6 +1,7 @@
 {
   "name": "pink-19",
   "version": "17.0.0",
+  "homepage":
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
