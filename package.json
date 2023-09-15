@@ -1,7 +1,6 @@
 {
   "name": "pink-19",
   "version": "17.0.0",
-  "homepage": "https://popovaludmila.github.io/126417-pink-19/",
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
@@ -30,7 +29,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
+    "build": "gulp build --output public",
     "start": "gulp start"
   },
   "browserslist": [
