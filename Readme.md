@@ -1,6 +1,7 @@
 Приложение "Pink"
 
-https://popovaludmila.github.io/126417-pink-19/
+126417-pink-19-zc35.vercel.app
+
 
 Адаптивной кроссбрузерная валидная pixel perfect верстка. 
 
