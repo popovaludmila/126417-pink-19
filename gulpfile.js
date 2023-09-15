@@ -18,6 +18,7 @@ var del = require("del");
 var svgstore = require("gulp-svgstore");
 
 var jsmin = require('gulp-jsmin');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -119,5 +120,10 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
+
+gulp.task("deploy", function() {
+  gulp.src("./build/**/*")
+  .pipe(ghPages())
+})
 
 gulp.task("start", gulp.series("build", "server"));
